@@ -1,4 +1,5 @@
 // lesson 15 (operators in JS)
+'use strict';
 
 console.log('arr' + "- object");
 console.log(4+ +"5");
