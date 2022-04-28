@@ -1,4 +1,4 @@
-// lesson 15 (conditions)
+// lesson 20 (conditions)
 'use strict';
 
 if (4==9){

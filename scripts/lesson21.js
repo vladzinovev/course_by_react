@@ -1,4 +1,5 @@
-// lesson 15 (logical operators addition)
+// lesson 21 (logical operators addition)
+'use strict';
 const hamburger = true;
 const fries = true;
 if (hamburger && fries){
