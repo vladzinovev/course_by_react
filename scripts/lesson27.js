@@ -19,9 +19,14 @@ function test(){
         console.log(i);
         if (i===3) return
     }
-    console.log('Done');
+    console.log('Done'); //не выведет
 }
 test();
+
+
+function doNothing(){}
+console.log(doNothing()=== undefined) //true
+
 
 
 
