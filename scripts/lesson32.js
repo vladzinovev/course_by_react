@@ -12,6 +12,7 @@ const options={
     }
 };
 
+
 console.log(Object.keys(options)); //[ 'name', 'width', 'height', 'colors' ]
 console.log(Object.keys(options).length); //4
 
