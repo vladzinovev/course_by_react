@@ -104,19 +104,20 @@ log(...num); // 2, 5, 7]
 
 
 
-
+//создаем новый клониованный массива
 const array = ["a","b"];
 const newArray=[...array];
 console.log(newArray); //[ 'a', 'b' ]
 
 
 
-
+//создаем новый клониованный объектa
 const q={
     one:1,
     two:2
 };
 const newObj={...q};
-console.log(newObj); // { one: 1, two: 2 }
-
+newObj.tt=3;
+console.log(newObj); // { one: 1, two: 2, tt: 3 }
+console.log(q); //{ one: 1, two: 2 }
 
