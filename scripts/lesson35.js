@@ -96,7 +96,7 @@ function log(a,b,c){
     console.log(c);
 }
 const num =[2, 5, 7];
-log(...num); // 2, 5, 7]
+log(...num); // 2, 5, 7
 
 
 

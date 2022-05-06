@@ -45,3 +45,8 @@ function foo(a,b) {
     return `${first} ${eng}`;
 }
 const result = foo(['Hello', 'Привет'], {ru: 'Мир', eng: 'World'})
+
+
+let time = '';
+2 > 3 || 2 ? time = 'Day' : time = 'Night' ;
+console.log(time);
