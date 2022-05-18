@@ -1,4 +1,4 @@
-// lesson 49 (async, defer, dynamic scripts)
+// lesson 50 (async, defer, dynamic scripts)
 "use strict"
 
 

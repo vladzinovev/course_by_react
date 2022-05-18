@@ -15,6 +15,9 @@ console.log(fruit.indexOf("q")); //-1
 
 
 const logg ="Hello world";
+logg.slice(6,8);
+logg += '...';
+console.log(logg);
 //первый аргумент начало,второй аргумент конец
 console.log(logg.slice(6,11)); //world
 console.log(logg.slice(6,10)); //worl
