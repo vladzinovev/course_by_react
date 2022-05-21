@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         console.log(e.targetTouches[0].pageX);
     });
-}
+})
 
 //touches   выводит список всех пальцев, которые на экране
 //targetTouches   все пальцы, которые взаимодействуют именно с этим элементом

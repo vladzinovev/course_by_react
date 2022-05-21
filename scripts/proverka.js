@@ -1,5 +1,5 @@
 function isPangram(string) {
-    for (let i=0; i<=string.length; i++){
+    for (let i=0; i<string.length; i++){
         if(string[i]==string[i+1]){
             console.log(string[i]);
             return true;
