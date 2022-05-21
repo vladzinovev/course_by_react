@@ -1,4 +1,4 @@
-// lesson 59 (Set)
+// lesson 60 (Set)
 "use strict"
 
 const arr = [1, 1, 2, 2, 3, 4, 5, 6, 5];
