@@ -31,8 +31,34 @@ btns[0].addEventListener('click',()=>{
 });
 
 
+//делегирование событий
+const wrapper = document.querySelector('button');
 
+//работает для всех сущес вующих кнопок и для созданных после
+wrapper.addEventListener('click', (event)=>{
+    if (event.target && event.target.tagName == "BUTTON"){
+        console.log('Hello');
+    }
+    if (event.target && event.target.classList.contains('blue')){
+        console.log('Hello');
+    }
+    //проверяет на совпадение
+    if (event.target && event.target.matches("button.red")){
+        console.log('Hello');
+    }
+    
+});
 
+//работает только для кнопок созданных ранее
+btns.forEach(btn=>{
+    btn.addEventListener('click', (event)=>{
+        console.log('Hello');
+    })
+})
+
+const btn=document.createElement('button');
+btn.classList.add('red');
+wrapper.append(btn);
 
 
 
