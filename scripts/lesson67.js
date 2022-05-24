@@ -39,7 +39,15 @@ lena=null;
 console.log(cache.has(lena));//false
 console.log(cache.has(alex));//true
 
+//WeakSet
+//add, has, delete
 
+let messages=[
+    {text:'Hello', from:'John'},
+    {text:'Hi', from:'Max'},
+    {text:'No', from:'Oleg'},
+];
+let raedMessages = new WeakSet();
 
 
 
