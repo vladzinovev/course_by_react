@@ -47,7 +47,16 @@ let messages=[
     {text:'Hi', from:'Max'},
     {text:'No', from:'Oleg'},
 ];
-let raedMessages = new WeakSet();
+let readMessages = new WeakSet();
+
+readMessages.add(messages[0]);
+readMessages.add(messages[0]);//не будет добавлен так как уже такой есть
+
+console.log(readMessages.has(messages[0]));//true
+
+messages.shift();//удаляем обьект
+console.log(readMessages.has(messages[0]));//false
+
 
 
 
