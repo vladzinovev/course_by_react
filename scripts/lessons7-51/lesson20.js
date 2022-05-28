@@ -1,5 +1,5 @@
 // lesson 20 (conditions)
-'use strict';
+'use strict'
 
 if (4==9){
     console.log('OK');
@@ -30,7 +30,7 @@ switch (number) {
     case 100:
         console.log('Много');
         break;
-    case 49:
+    case 50:
         console.log('В точку');
         break; 
     default:

@@ -1,6 +1,6 @@
 // lesson 26 (function arguments)
 
-"use strict"
+"use strict";
 
 const usdCurr = 20,
       eurCurr = 30;

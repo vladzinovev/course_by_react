@@ -1,5 +1,5 @@
 // lesson 25 (functions)
-"use strict"
+"use strict";
 
 function showFirstMessage(){
     console.log("Hello world!");
@@ -45,15 +45,18 @@ const logger = function(){
     console.log("Function logger");
 };
 logger();
-
-const calc = (a,b) =>{
+function calc(a,b){
+    console.log(a+b);
+}
+const calc1 = (a,b) =>{
+    console.log(a+b);
    return a+b;
 };
-const calc = (a,b) => a+b;
+const calc2 = (a,b) => console.log(a+b);
 
-
-
-
+calc(5,6);
+calc1(5,6);
+calc2(5,6);
 
 
 

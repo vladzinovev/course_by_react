@@ -13,7 +13,7 @@ const cola = 0;
 if (chicken && cola){
     console.log('Я сыт');
 }
-console.log (chicken && cola);
+console.log (chicken && cola);//0
 
 
 const cheezburger = 2;
@@ -74,3 +74,11 @@ if (nuggets === 3 && fanta === 1|| icecream && snikers && burger){
 console.log(0); // false
 console.log(!0); // true
 
+
+console.log(0 || 1); //1
+console.log(1 || 0); //1
+console.log(1 || 5); //1
+console.log(null || 5);  //5
+console.log(5 || null);  //5
+console.log(0 || 'dddd');  //dddd
+console.log(null || undefined || 0); //0

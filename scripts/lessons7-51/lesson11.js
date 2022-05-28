@@ -19,7 +19,7 @@ const obj = {
     name: "John",
     age:25,
     isMarried:false,
-    4:no,
+    4:'no',
     abc:{
         df: [{},{}],
         def:{
@@ -28,10 +28,10 @@ const obj = {
     }
 };
 
-console.log(obj.name);
-console.log(obj["age"]);
-console.log(obj["name"]);
-console.log(obj[4]);
+console.log(obj.name);//John
+console.log(obj["age"]);//25
+console.log(obj["name"]);//John
+console.log(obj[4]);//no
 
 obj.b = '1234';
 console.log(obj.b);
@@ -54,4 +54,4 @@ const storeDescription={
         orange:280
     },
     open:true
-}
+};

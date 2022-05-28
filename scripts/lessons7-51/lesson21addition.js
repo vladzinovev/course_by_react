@@ -1,6 +1,8 @@
 // Что выведет в консоль код?
 
 console.log( NaN || 2 || undefined );  //2
+
+console.log( NaN || 0 || undefined );  //undefined
  
 console.log( NaN && 2 && undefined );  //nan
  
@@ -25,7 +27,7 @@ const cola = 0;
 const nuggets = 2;
  
 if (hamburger === 3 && cola || fries === 3 && nuggets) {
-   console.log('Done!')
+   console.log('Done!');
 }
 //done
 
@@ -37,7 +39,7 @@ const cola = 0;
 const nuggets = 2;
 console.log(hamburger || cola || fries === 3 || nuggets===3); //false
 if (hamburger || cola || fries === 3 || nuggets) {
-   console.log('Done!')
+   console.log('Done!');
 }
 //done
 
@@ -52,6 +54,6 @@ const cola = 0;
 const nuggets = 2;
  
 if (hamburger && cola || fries === 3 && nuggets) {
-   console.log('Done!')
+   console.log('Done!');
 }
 //не выполнится, выход из циклв
