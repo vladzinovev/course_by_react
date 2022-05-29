@@ -22,6 +22,7 @@ console.log(logg);//Hello world...
 console.log(logg.slice(6,11)); //world
 console.log(logg.slice(6,10)); //worl
 console.log(logg.slice(-4,-1)); //orl
+console.log(logg.slice(1,6)); //ello
 //первый аргумент начало,второй аргумент конец
 //отрицательные значения не поддерживает
 console.log(logg.substring(1,6)); //ello
@@ -36,7 +37,6 @@ console.log(Math.round(num)); //13
 const test = "12.2px";
 console.log(parseInt(test)); //12
 console.log(parseFloat(test)); //12.2
-
 
 
 
