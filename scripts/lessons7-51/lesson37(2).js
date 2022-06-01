@@ -1,5 +1,5 @@
 // lesson 37(2) (practice)
-"use strict"
+"use strict";
 const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
 
 function sortStudentsByGroups(arr) {
@@ -20,7 +20,7 @@ function sortStudentsByGroups(arr) {
             arrNew4.push(arr[i]);
         }
     }
-    console.log([arrNew1,arrNew2,arrNew3,`Оставшиеся студенты: ${arrNew4.length === 0 ? '-' : arrNew4.join(', ')}`])
+    console.log([arrNew1,arrNew2,arrNew3,`Оставшиеся студенты: ${arrNew4.length === 0 ? '-' : arrNew4.join(', ')}`]);
     return [arrNew1,arrNew2,arrNew3,`Оставшиеся студенты: ${arrNew4.length === 0 ? '-' : arrNew4.join(', ')}`];
-};
+}
 sortStudentsByGroups(students);

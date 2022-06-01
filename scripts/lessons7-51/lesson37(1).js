@@ -1,5 +1,5 @@
 // lesson 37(1) (practice)
-"use strict"
+"use strict";
 
 const shoppingMallData = {
     shops: [
@@ -23,7 +23,7 @@ const shoppingMallData = {
     height: 5,
     moneyPer1m3: 30,
     budget: 50000
-}
+};
 
 function isBudgetEnough(data) {
     let culc = 0;

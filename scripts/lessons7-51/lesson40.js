@@ -1,5 +1,5 @@
 // lesson 40 (closure and lexical environment)
-"use strict"
+"use strict";
 
 let number = 5;
 function logNumber(){
@@ -19,23 +19,23 @@ logNum(); //4
 
 
 
-function createCouner(){
+function createCounter(){
     let counter = 0;
 
     const myFunction = function(){
         counter = counter +1;
         return counter;
-    }
+    };
     return myFunction;
-};
-const increment = createCouner();
-const increment2 = createCouner();
+}
+const increment = createCounter();
+const increment2 = createCounter();
 const c1 = increment();
 const c2 = increment();
 const c3 = increment();
-const c42 = increment2();
-const c43 = increment2();
-console.log(increment, increment2, c1,c2,c3,c42,c43);
+const c21 = increment2();
+const c22 = increment2();
+console.log(increment, increment2, c1,c2,c3,c21,c22);//[Function: myFunction] [Function: myFunction] 1 2 3 1 2
 
 
 {

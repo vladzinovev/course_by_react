@@ -32,8 +32,8 @@ const personalMovieDB = {
     },
     rememberMyFilms: function() {
         for (let i = 0; i < 2; i++) {
-            const a = prompt('Один из последних просмотренных фильмов?', '').trim();
-                  b = prompt('На сколько оцените его?', '');
+            let a = prompt('Один из последних просмотренных фильмов?', '').trim();
+            let b = prompt('На сколько оцените его?', '');
         
             if (a != null && b != null && a != '' && b != '' && a.length < 50) {
                 personalMovieDB.movies[a] = b;
@@ -80,8 +80,8 @@ const personalMovieDB = {
         } */
         for (let i = 1; i <2; i++) {
             let genres = prompt(`Введите ваши любимые жанры через запятую`).toLowerCase();
-            if(genre ==='' || genre === null){
-                console.log("Вы ввели некорректные данные или не ввели их вовсе")
+            if(genres ==='' || genres === null){
+                console.log("Вы ввели некорректные данные или не ввели их вовсе");
                 i--;
             }
             else{
@@ -90,8 +90,8 @@ const personalMovieDB = {
             }
         }
         personalMovieDB.genres.forEach((item,i)=>{
-            console.log(`Любимый жанр ${i+1} - это ${item}`)
-        })
+            console.log(`Любимый жанр ${i+1} - это ${item}`);
+        });
     }
 };
 

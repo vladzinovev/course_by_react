@@ -118,12 +118,14 @@ window.addEventListener('DOMContentLoaded', function() {
     
     modalCloseBtn.addEventListener('click', closeModal);
 
+    //закрытие модального окна при клике на подложку
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeModal();
         }
     });
 
+    //закрытие модального окна при клике на ESC на клавиатуре
     document.addEventListener('keydown', (e) => {
         if (e.code === "Escape" && modal.classList.contains('show')) { 
             closeModal();

@@ -1,13 +1,13 @@
 // lesson 41 (test)
-"use strict"
-
+"use strict";
 
 /* 
 const result = getSum(5,6);
 const getSum = function(a,b){
     return a + b;
 };
- */
+  */
+
 
 console.log(typeof(NaN));
 
@@ -17,11 +17,11 @@ console.log(typeof('4'));
 const user = {
     name: 'Alex',
     age: 25
-}
+};
 const {name, age} = user;
 
-const num = [1, function(){ console.log("hello")}, 2];
-console.log(num);
+const num = [1, function(){ console.log("hello");}, 2];
+console.log(num);//[ 1, [Function (anonymous)], 2 ]
 
 
 
@@ -34,7 +34,7 @@ console.log(0 || NaN || false || null);//null
 
 
 for (let i = 1; i < 5; i++) {
-    console.log(i + 1)
+    console.log(i + 1);
 }
 
 
@@ -44,7 +44,7 @@ function foo(a,b) {
     console.log(`${first} ${eng}`);
     return `${first} ${eng}`;
 }
-const result = foo(['Hello', 'Привет'], {ru: 'Мир', eng: 'World'})
+const result = foo(['Hello', 'Привет'], {ru: 'Мир', eng: 'World'});
 
 
 let time = '';

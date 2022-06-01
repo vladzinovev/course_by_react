@@ -21,8 +21,7 @@ console.log(obj); //{ a: 10, b: 1 }
 //поверхностная копия объектов
 function copy(mainObj){
     let objCopy={};
-    let key;
-    for(key in mainObj){
+    for(let key in mainObj){
         objCopy[key]=mainObj[key];
     }
     return objCopy;
@@ -49,7 +48,6 @@ const add ={
 console.log(Object.assign(numbers,add));
 //{a: 2, b: 5, c: { x: 7, y: 4 }, d: 17, e: 20}
 
-
 //создаем новый клониованный объект
 const clone = Object.assign({},add);
 clone.d =20;
@@ -62,7 +60,7 @@ console.log(clone);//{d: 20, e: 20}
 
 
 
-
+//создаем новый клониованный массив
 const oldArray=['a','b','c'];
 const newArray = oldArray.slice();
 newArray[1]='done';
@@ -72,22 +70,13 @@ console.log(oldArray);//[ 'a', 'b', 'c' ]
 
 
 
-
+//создаем новый клониованный массив из двух 
 const video=['youtube','vimeo','rutube'],
       blogs = ['wordpress','livejournal','blogger'],
       internet = [...video,...blogs,'vk','facebook'];
-console.log(internet);
-/* [
-    'youtube',
-    'vimeo',
-    'rutube',
-    'wordpress',
-    'livejournal',
-    'blogger',
-    'vk',
-    'facebook'
-] */
-
+console.log(video);//[ 'youtube', 'vimeo', 'rutube' ]
+console.log(blogs);//[ 'wordpress', 'livejournal', 'blogger' ]
+console.log(internet); //[ 'youtube', 'vimeo', 'rutube', 'wordpress', 'livejournal', 'blogger', 'vk', 'facebook' ] 
 
 
 function log(a,b,c){
@@ -104,20 +93,23 @@ log(...num); // 2, 5, 7
 
 
 
-//создаем новый клониованный массива
+//создаем новый клониованный массив
 const array = ["a","b"];
 const newArray=[...array];
-console.log(newArray); //[ 'a', 'b' ]
+newArray[1]='done';
+console.log(array);//[ 'a', 'b' ]
+console.log(newArray); //[ 'a', 'done' ]
 
 
 
-//создаем новый клониованный объектa
+//создаем новый клониованный объект
 const q={
     one:1,
     two:2
 };
 const newObj={...q};
 newObj.tt=3;
-console.log(newObj); // { one: 1, two: 2, tt: 3 }
+newObj.one=6;
+console.log(newObj); // { one: 6, two: 2, tt: 3 }
 console.log(q); //{ one: 1, two: 2 }
 

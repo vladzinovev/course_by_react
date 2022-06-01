@@ -1,5 +1,5 @@
 // lesson 41 (task)
-"use strict"
+"use strict";
 
 
 
@@ -33,6 +33,7 @@ console.log(x); //2
 console.log([]+ 1 + 2);//12
 //5
 console.log("1"[0]); //1
+console.log("1"[2]); //undefined
 //6
 console.log(2 && 1 && null && 0 && undefined); //false (null)
 //7
@@ -41,8 +42,9 @@ console.log(a && b); // true
 //8
 console.log(null || 2 && 3 || 4); //3
 //9
-let a = [1, 2, 3], b = [1, 2, 3];
-console.log(a == b );//false
+let arr = [1, 2, 3], brr = [1, 2, 3];
+console.log(arr == brr );//false
+console.log(arr === brr );//false
 //10
 console.log( +"infinity"); //infinity
 //11

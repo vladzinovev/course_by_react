@@ -1,17 +1,17 @@
 // lesson 56 (data type symbol)
-"use strict"
+"use strict";
 
 
 
 const obj = {
     'name':'Test',
     [Symbol('id3')]:3
-}
+};
 console.log(obj['id3']);//undefind
 
 let id = Symbol();
 obj[id]=1;
-console.log(obj);//{ name: 'Test', [Symbol()]: 1 }
+console.log(obj);//{ name: 'Test', [Symbol(id3)]: 3, [Symbol()]: 1 }
 console.log(obj[id]);//1
 //console.log(obj[id3]);//ошибка
 
@@ -19,10 +19,13 @@ console.log(obj[id]);//1
 let id1 = Symbol('id');
 let id2 = Symbol('id');
 console.log(id1 == id2);//false
-
+obj[id1]=3;
+obj[id2]=4;
 console.log(obj[id]);//1
-
-for (let value in obj) console.log(value) //name
+console.log(obj[id1]);//3
+console.log(obj[id2]);//4
+console.log(obj);//{ name: 'Test', [Symbol(id3)]: 3, [Symbol()]: 1, [Symbol(id)]: 3, [Symbol(id)]: 4 }
+for (let value in obj) console.log(value); //name
 
 
 
