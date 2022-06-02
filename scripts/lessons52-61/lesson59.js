@@ -1,5 +1,5 @@
 // lesson 59 (Map)
-"use strict"
+"use strict";
 
 
 
@@ -40,7 +40,7 @@ const shops = [
     {rice: 500},
     {oil: 200},
     {bread: 50}
-]
+];
 
 const map = new Map();//создаем новую карту
 const map2 = new Map([

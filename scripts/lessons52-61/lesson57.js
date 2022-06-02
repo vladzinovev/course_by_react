@@ -1,12 +1,12 @@
 // lesson 57 (дескрипторы свойств и полезные методы обьектов)
-"use strict"
+"use strict";
 
 
 
 
 // writable, если стоит true , то свойтво в обьекте можно изменить, если false, то только для чтения
 // enumerable, если стоит true , то свойтво будет перечисляться в циклах, если false, то циклы будут его игнорировать
-// configurable, если стоит true , то свойтво можно будет удалить, а атрибудт его изменить если, false, то делать этого нельзя
+// configurable, если стоит true , то свойтво можно будет удалить, а атрибут его изменить, если false, то делать этого нельзя 
 
 
 
@@ -17,8 +17,8 @@ const user={
     showMyPublicData: function(){
         console.log(`${this.name} ${this.surname}`);
     }
-}
-console.log(Object.getOwnPropertyDescriptor(user,'name'));//{ value: 'Alex', writable: true, enumerable: true, configurable: true }
+};
+console.log(Object.getOwnPropertyDescriptor(user,'name'));//{ value: 'Alex', writable: true, enumerable: true, configurable: true}
 
 //изменяем наши параметры
 //1аргум-обращаемся к нему, 2аргум-свойство, которое хотим изменить, 3арг-обьект с флагами, которые хотим модифицировать
@@ -39,7 +39,7 @@ for (let key in user) console.log(key);// name  surname  birthday  showMyPublicD
 Object.defineProperties(user,{
     name: {writable: false},
     surname: {writable: false},
-})
+});
 
 
 
