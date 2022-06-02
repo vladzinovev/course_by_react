@@ -30,7 +30,24 @@ console.log(ivan);//User { name: 'Ivan', id: 28, human: true, hello: [Function (
 User.prototype.exit=function(){
     console.log(`Пользователь ${this.name} ушел`);
 };
+
 ivan.exit();//Пользователь Ivan ушел
 console.log(ivan);//User { name: 'Ivan', id: 28, human: true, hello: [Function (anonymous)]}
 console.log(ivan);//User { name: 'Ivan', id: 28, human: true, hello: [Function (anonymous)]}
+
+//class constructors
+
+class User{
+    constructor(name,id){
+        this.name = name;
+        this.id=id;
+        this.human=true;
+    }
+    hello() {
+        console.log(`Hello ${this.name}`);
+    }
+    exit() {
+        console.log(`Пользователь ${this.name} ушел`);
+    }
+}
 
