@@ -43,6 +43,6 @@ const userDataFunc={
     say:function(){
         console.log('Hello');
     }
-}
+};
 userData.say();
 userData.hey?.();

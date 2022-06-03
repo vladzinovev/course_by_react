@@ -1,6 +1,6 @@
 // lesson 13 (communication with the user)
 
-"use strict"
+"use strict";
 
 //alert("Hello");
 

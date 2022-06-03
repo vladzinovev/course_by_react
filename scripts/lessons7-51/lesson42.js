@@ -1,5 +1,5 @@
 // lesson 42 (getting elements from the page)
-"use strict"
+"use strict";
 
 //получаем эл через id
 const box = document.getElementById('box'); 
@@ -10,7 +10,7 @@ const btns = document.getElementsByTagName('button');
 const btn = document.getElementsByTagName('button')[2];
 //получаем второй эл button из всех
 const btnses = document.getElementsByTagName('button');
-console.log(btnses[2])
+console.log(btnses[2]);
 
 //получаем все элементы через class
 const circles = document.getElementsByClassName('circle');

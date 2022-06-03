@@ -1,5 +1,5 @@
 // lesson 29(3) (practice)
-"use strict"
+"use strict";
 
 
 // Место для первой задачи
@@ -8,7 +8,7 @@ function getTimeFromMinutes(count) {
         return "Ошибка, проверьте данные";
     }else{
         if(count<=59 && count>=0 ){
-            return `Это 0 часов и ${count} минут`
+            return `Это 0 часов и ${count} минут`;
         }else{
             let h,m;
             h=parseInt(count/60);
@@ -35,7 +35,7 @@ console.log(getTimeFromMinutes(400));
 
 // Место для второй задачи
 function findMaxNumber(num1,num2,num3,num4) {
-    if(typeof(num1) !== 'number' || typeof(num2) !== 'number' || typeof(num3) !== 'number' || typeof(num4) !== 'number'){
+    if(typeof(num1) !== 'number' || typeof(num2) !== 'number' || typeof(num3) !== 'number' || typeof(num4) !== 'number') {
         return 0;
     } else{
         return Math.max(num1, num2 ,num3, num4);

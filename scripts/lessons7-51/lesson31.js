@@ -1,5 +1,5 @@
 // lesson 31 (callback functions)
-"use strict"
+"use strict";
 
 
 

@@ -1,5 +1,5 @@
 // lesson 20 (conditions)
-'use strict'
+'use strict';
 
 if (4==9){
     console.log('OK');

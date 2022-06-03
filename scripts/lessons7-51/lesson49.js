@@ -1,5 +1,5 @@
 // lesson 49 (events on mobile devices)
-"use strict"
+"use strict";
 
 //touchstart  когда коснулись пальцем элемента
 //touchmove   когда после косания элемент начинает двигаться
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         console.log(e.targetTouches[0].pageX);
     });
-})
+});
 
 //touches   выводит список всех пальцев, которые на экране
 //targetTouches   все пальцы, которые взаимодействуют именно с этим элементом

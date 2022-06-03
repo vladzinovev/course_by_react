@@ -1,5 +1,5 @@
 // lesson 67 (WeakMap и WeakSet)
-"use strict"
+"use strict";
 
 let user = {name: 'Ivan'};
 

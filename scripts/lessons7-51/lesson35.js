@@ -79,6 +79,7 @@ console.log(blogs);//[ 'wordpress', 'livejournal', 'blogger' ]
 console.log(internet); //[ 'youtube', 'vimeo', 'rutube', 'wordpress', 'livejournal', 'blogger', 'vk', 'facebook' ] 
 
 
+
 function log(a,b,c){
     console.log(a);
     console.log(b);

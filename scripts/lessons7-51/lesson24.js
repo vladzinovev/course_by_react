@@ -1,5 +1,5 @@
 // lesson 24 (practice)
-"use strict"
+"use strict";
 
 /* Задание на урок:
 
@@ -40,7 +40,6 @@ for (let i = 0; i < 2; i++) {
         i--;
     }
 }
- 
 
 if(personalMovieDB.count <10){
     console.log('Просмотрено довольно мало фильмов');
@@ -52,4 +51,6 @@ if(personalMovieDB.count <10){
     console.log('Произошла ошибка');
 }
 console.log(personalMovieDB.count);
+
+
 

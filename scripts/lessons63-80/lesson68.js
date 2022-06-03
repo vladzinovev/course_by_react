@@ -1,5 +1,5 @@
 // lesson 68 (Работа с датой)
-"use strict"
+"use strict";
 
 const now = new Date();
 console.log(now);//2022-05-26T20:41:37.326Z

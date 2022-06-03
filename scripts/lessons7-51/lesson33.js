@@ -1,5 +1,5 @@
 // lesson 33 (arrays and pseudo-arrays)
-"use strict"
+"use strict";
 
 /* 
 
@@ -19,7 +19,7 @@ for (let value of arr){
 }
 
 arr.forEach(function(item,i,arr){
-    console.log(`${i}: ${item} внутри массива ${arr}`)
+    console.log(`${i}: ${item} внутри массива ${arr}`);
 }); */
 
 const str = prompt("","");

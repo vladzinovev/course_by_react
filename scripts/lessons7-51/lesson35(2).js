@@ -1,5 +1,5 @@
 // lesson 35(2) (practice)
-"use strict"
+"use strict";
 
 
 
@@ -7,9 +7,9 @@ const family = ['Peter', 'Ann', 'Alex', 'Linda'];
 
 function showFamily(arr) {
     let str = '';
-    arr.length === 0 ? str = 'Семья пуста' : str = 'Семья состоит из: ';
+    arr.length === 0 ? str = 'Семья пуста' : str ='Семья состоит из: ';
     arr.forEach(number => {
-        str += `${number} `
+        str += `${number} `;
     });
     /* 
     arr.forEach(function(lang) {
@@ -24,8 +24,8 @@ const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
 
 function standardizeStrings(arr) {
     arr.forEach(city => {
-        console.log(city.toLowerCase())
-    })
+        console.log(city.toLowerCase());
+    });
 }
 standardizeStrings(favoriteCities);
 

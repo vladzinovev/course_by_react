@@ -1,5 +1,5 @@
 // lesson 27 (return)
-"use strict"
+"use strict";
 
 const usdCurr = 20,
       discount = 0.9;
@@ -17,7 +17,7 @@ promotion(res);
 function test(){
     for(let i=0;i<5;i++){
         console.log(i);
-        if (i===3) return
+        if (i===3) return;
     }
     console.log('Done'); //не выведет
 }
@@ -25,7 +25,7 @@ test();
 
 
 function doNothing(){}
-console.log(doNothing()=== undefined) //true
+console.log(doNothing()=== undefined); //true
 
 
 

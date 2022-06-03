@@ -1,5 +1,5 @@
 // lesson 29(2) (practice)
-"use strict"
+"use strict";
 
 
 function fib(num) {
@@ -18,7 +18,7 @@ function fib(num) {
         }else{
             text +=` `;
             text +=`${b}`;
-            for (i=1;i<num-1;i++){
+            for (let i=1;i<num-1;i++){
                 c=a+b;
                 a=b;
                 b=c;

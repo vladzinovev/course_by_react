@@ -1,5 +1,5 @@
 // lesson 47 (recursion)
-"use strict"
+"use strict";
 
 //рекурсия - функция вызывает сама себя
 
@@ -9,7 +9,7 @@ function pow(x,n) {
         result *=x;
     }
     return result;
-};
+}
 
 //рекурсия
 function pow(x,n){

@@ -1,10 +1,10 @@
 // lesson 27(1) (practice)
-"use strict"
+"use strict";
 
 
 // Место для первой задачи
 function sayHello(name) {
-    return `Привет, ${name}`;7
+    return `Привет, ${name}`;
 }
 console.log(sayHello('Andrey'));
 

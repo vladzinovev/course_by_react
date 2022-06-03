@@ -1,5 +1,5 @@
 // lesson 50 (async, defer, dynamic scripts)
-"use strict"
+"use strict";
 
 
 const p = document.querySelectorAll('p');

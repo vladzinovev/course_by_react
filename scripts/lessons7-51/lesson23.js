@@ -1,5 +1,5 @@
 // lesson 23 (cycles within a cycle)
-'use strict';
+"use strict";
 
 for (let i = 0; i<3; i++){
     console.log(i);

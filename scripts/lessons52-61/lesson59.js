@@ -10,7 +10,7 @@ const user={
     showMyPublicData: function(){
         console.log(`${this.name} ${this.surname}`);
     }
-}
+};
 console.log(typeof(Object.keys(user)[0]));//string (цифра 4 - строка)
 
 //создаем из обьекта массив с массивами
@@ -50,6 +50,7 @@ const map2 = new Map([
 //в set передаем два аргумента ключ и значение
 map.set(shops[0],5000);//5000-бюджет
 console.log(map);//Map(1) { { rice: 500 } => 5000 }
+console.log(map2);//Map(1) { { paper: 400 } => 8000 }
 
 map.set(shops[1],15000);//15000-бюджет
 map.set(shops[2],25000);//25000-бюджет
@@ -72,7 +73,7 @@ console.log(map);
     { oil: 200 } => 15000,
     { bread: 50 } => 25000
 } */
-
+console.log(map.keys());
 
 //get получаем наши значения
 console.log(map.get(shops[0]));//5000
@@ -148,7 +149,7 @@ for (let [shop, price] of map.entries()){
 
 map.forEach((value, key, map)=>{
     console.log(key, value);
-})
+});
 /* 
 { rice: 500 } 5000
 { oil: 200 } 15000

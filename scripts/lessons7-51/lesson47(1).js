@@ -1,5 +1,5 @@
 // lesson 47(1) (practice)
-"use strict"
+"use strict";
 
 
 
@@ -16,7 +16,7 @@ function factorial(n) {
         n = n * factorial(n-1); 
     }
     return n;
-};
+}
 console.log(factorial(5));
 
 

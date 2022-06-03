@@ -2,7 +2,7 @@
 'use strict';
 
 console.log('arr' + "- object");
-console.log(4+ +"5");
+console.log(4 + +"5");
 
 
 
@@ -32,8 +32,8 @@ console.log(5*2 === '10');  //false
 const isChecked= true,
       isClose = false;
 
-console.log(isChecked && isClose) //false
-console.log(isChecked && !isClose) //true
-console.log(isChecked || isClose) //true
+console.log(isChecked && isClose); //false
+console.log(isChecked && !isClose); //true
+console.log(isChecked || isClose) ;//true
 
 
