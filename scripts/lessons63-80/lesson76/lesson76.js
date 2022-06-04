@@ -72,4 +72,47 @@ console.log(double(13));//26
 
 
 
+//5)работа с сайтом
 
+const btn = document.querySelector('button');
+
+btn.addEventListener('click',function(){
+    this.style.background = 'red';
+    console.log(this); // <button></button>
+});
+
+//у стрелочной функции будет undefind
+btn.addEventListener('click',()=>{
+    this.style.background = 'red';
+    console.log(this); // <button></button>
+});
+
+//у стрелочной функции будет undefind, но можем прописать через event target
+btn.addEventListener('click',(e)=>{
+    e.target.style.background = 'red';
+});
+
+const objO={
+    num:5,
+    sayNumber: function(){
+        const say=()=>{
+            console.log(this.num);//5
+            console.log(this); //{num:5, sayNumber:f}
+        };
+        say();
+    }
+};
+obj.sayNumber();
+
+//первый вариант
+const double1 = (a)=>{
+    return a*2;
+};
+//второй вариант
+const double2 =(a)=> a*2;
+//третий вариант
+const double3 =a=> a*2;
+
+console.log(double1(4));//8
+console.log(double2(4));//8
+console.log(double3(4));//8
