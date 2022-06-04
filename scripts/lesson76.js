@@ -11,7 +11,30 @@ function showThis(){
         return a + b;
     }
 }
-showThis();
+showThis(4,5);
+
+//2)контекст у методов обьектов - сам обьект
+const obj={
+    a:20,
+    b:10,
+    sum:function(){
+        console.log(this);
+    }
+}
+obj.sum();//{ a: 20, b: 10, sum: [Function: sum] }
+
+const object={
+    a:20,
+    b:10,
+    sum:function(){
+        function shout(){
+            console.log(this);
+        }
+        shout();
+    }
+}
+object.sum();//при use strict будет undefind
+
 
 
 
