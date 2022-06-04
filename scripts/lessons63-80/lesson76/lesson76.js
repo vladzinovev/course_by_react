@@ -49,9 +49,24 @@ function User(name,id){
 const ivan = new User('Ivan',28);
 
 
+//4)ручная привязка this: call, apply, bind
+function sayName(surname){
+    console.log(this);
+    console.log(this.name + surname);
+}
+const user ={
+    name:'John'
+};
+sayName.call(user,'Smith');//{ name: 'John' } //JohnSmith
+sayName.apply(user,['Smith']);//{ name: 'John' } //JohnSmith
 
 
-
+function count(num){
+    return this*num;
+}
+const double = count.bind(2);
+console.log(double(3));//6
+console.log(double(13));//26
 
 
 
