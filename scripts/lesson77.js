@@ -14,8 +14,10 @@ class Rectangle {
     }
 }
 
-
-
+const square =new Rectangle (10,10);
+console.log(square.calcArea());//100
+const long =new Rectangle (20,100);
+console.log(long.calcArea());//2000
 
 
 
