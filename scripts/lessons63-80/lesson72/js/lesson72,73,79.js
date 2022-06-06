@@ -213,5 +213,13 @@ window.addEventListener('DOMContentLoaded', function() {
             this.parent.append(element);
         }
     }
+    /* 
+    const div = new MenuCard();
+    div.render();
+
+    //или
+
+    new MenuCard().render();
+    */
 
 });
