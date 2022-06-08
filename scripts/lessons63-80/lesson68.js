@@ -2,6 +2,7 @@
 "use strict";
 
 const now = new Date();
+// получаем текущую дату
 console.log(now);//2022-05-26T20:41:37.326Z
 //получаем год
 console.log(now.getFullYear());//2022
@@ -13,7 +14,7 @@ console.log(now.getDate());//26
 console.log(now.getDay());//4 четверг
 //получаем часы 
 console.log(now.getHours());//23
-//получаем часы пояса
+//получаем часы по часововому поясу
 console.log(now.getUTCHours());//20
 //получаем разницы между часовым поясом и UTC
 console.log(now.getTimezoneOffset());//-180 (3 часа)
@@ -25,7 +26,7 @@ const my = new Date('2022-10-10');
 //new Date.parse('2022-10-10');
 console.log(my);//2022-10-10T00:00:00.000Z
 
-const myDate = new Date(2022, 5, 1, 20);
+const myDate = new Date(2022, 5, 1, 10);
 console.log(myDate);//2022-06-01T17:00:00.000Z  (часовой пояс +3)
 
 //передаем в секундах
@@ -33,8 +34,8 @@ const myDate2 = new Date(0);
 console.log(myDate2);//1970-01-01T00:00:00.000Z (начало отсчета)
 
 //передаем в секундах
-const myDate3 = new Date(-10);
-console.log(myDate3);//1969-12-31T23:59:59.990Z (от начала отсчета)
+const myDate3 = new Date(-100);
+console.log(myDate3);//1969-12-31T23:59:59.900Z (от начала отсчета)
 
 
 
@@ -42,7 +43,7 @@ console.log(myDate3);//1969-12-31T23:59:59.990Z (от начала отсчет�
 const nows = new Date();
 console.log(nows.setHours(18));//1653580528649
 console.log(nows);//2022-05-26T15:55:28.649Z
-console.log(nows.setHours(18,40));//1653580528649
+console.log(nows.setHours(18,40));//1653580588649
 console.log(nows);//2022-05-26T15:40:28.649Z
 
 
@@ -51,4 +52,4 @@ for (let i=0; i<10000; i++){
     let some =i**3;
 }
 let end =new Date();
-console.log(end-start);//483
+console.log(end-start);//11

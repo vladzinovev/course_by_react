@@ -1,13 +1,16 @@
 // lesson 61 (BigInt)
-"use strict"
+"use strict";
 
 
 console.log(Number.MAX_SAFE_INTEGER);//9007199254740991
 
 //создаем большие числа
 
-const bigint = 9595847473595857744737464n;
+const bigint = 934947575843736476466464n;
 const sameBigInt = BigInt(934947575843736476466464);
+
+console.log(bigint);//934947575843736476466464n
+console.log(sameBigInt);//934947575843736451547136n
 
 console.log(typeof(bigint));//bigint
 console.log(typeof(sameBigInt));//bigint

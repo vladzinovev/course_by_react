@@ -2,20 +2,21 @@
 "use strict";
 
 let user = {name: 'Ivan'};
-
-const arr = [user];
+let arr = [user];
+console.log(user);//{ name: 'Ivan' }
 user = null;
 console.log(user);//null
-console.log(user);//{name: 'Ivan'}
+console.log(arr);//[ { name: 'Ivan' } ]
 
 
-
+let user = {name: 'Ivan'};
 let map = new Map();
 map.set(user,'data');
 user=null;
-console.log(map.keys);//{name: 'Ivan'}
+console.log(map.keys);//[Function: keys] или value- {name: 'Ivan'}
 
 
+let user = {name: 'Ivan'};
 let mapA = new WeakMap();
 mapA.set(user,'data');
 user=null;
@@ -23,7 +24,7 @@ console.log(mapA.has(user));//false
 console.log(mapA);//WeakMap { <items unknown> }
 
 
-
+let user = {name: 'Ivan'};
 let cache = new WeakMap();
 function cacheUser(user){
     if(!cache.has(user)){

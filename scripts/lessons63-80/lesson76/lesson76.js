@@ -2,7 +2,7 @@
 "use strict";
 
 
-//1) обычная функция this =window, но если включить use strict=undefind;
+//1) обычная функция this =window, но если включить use strict, то this=undefind;
 function showThis(){
     console.log(this);
     function sum(){
@@ -20,7 +20,7 @@ const obj={
     sum:function(){
         console.log(this);
     }
-}
+};
 obj.sum();//{ a: 20, b: 10, sum: [Function: sum] }
 
 const object={
@@ -32,7 +32,7 @@ const object={
         }
         shout();
     }
-}
+};
 object.sum();//при use strict будет undefind
 
 

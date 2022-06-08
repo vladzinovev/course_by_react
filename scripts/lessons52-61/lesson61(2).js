@@ -1,5 +1,5 @@
 // lesson 61(2) (practice)
-"use strict"
+"use strict";
 
 
 //проверка на повторяющиеся буквы в строке

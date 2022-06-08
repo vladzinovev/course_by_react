@@ -1,5 +1,5 @@
 // lesson 61(1) (practice)
-"use strict"
+"use strict";
 
 
 
