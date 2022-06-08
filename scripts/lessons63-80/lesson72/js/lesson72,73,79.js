@@ -179,7 +179,7 @@ window.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', showModalByScroll);
 
     // Используем классы для создание карточек меню
-
+    //урок 79
     class MenuCard {
         constructor(src, alt, title, descr, price, parentSelector) {
             this.src = src;
@@ -213,14 +213,7 @@ window.addEventListener('DOMContentLoaded', function() {
             this.parent.append(element);
         }
     }
-    /* 
-    const div = new MenuCard();
-    div.render();
 
-    //или
-
-    new MenuCard().render();
-    */
     new MenuCard(
         "img/tabs/vegy.jpg",
         "vegy",
@@ -247,4 +240,5 @@ window.addEventListener('DOMContentLoaded', function() {
         21,
         ".menu .container"
     ).render();
+
 });
