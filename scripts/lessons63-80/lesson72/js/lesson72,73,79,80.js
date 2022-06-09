@@ -179,6 +179,8 @@ window.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', showModalByScroll);
 
     // Используем классы для создание карточек меню
+
+    
     //урок 79
 /*  class MenuCard {
         constructor(src, alt, title, descr, price, parentSelector) {

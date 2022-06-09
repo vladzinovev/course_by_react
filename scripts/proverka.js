@@ -1,26 +1,18 @@
-"use strict";
+//создать элемент
+const div = document.createElement('div');
+//добавили класс black
+div.classList.add('black');
 
+//добавить элемент в конец родителя
+//document.body.append(div);
+//или старый вариант (через родителя)
+//wrapper.appendChild(div);
 
+//добавить элемент в wrapper в конец родителя
+document.querySelector('.wrapper').append(div);
+//или
+//const wrapper = document.querySelector('.wrapper');
+//wrapper.append(div);
 
-let user = {name: 'Ivan'};
-let arr = [user];
-console.log(user);//{ name: 'Ivan' }
-user = null;
-console.log(user);//null
-console.log(arr);//[ { name: 'Ivan' } ]
-
-
-
-let map = new Map();
-map.set(user,'data');
-user=null;
-console.log(map.keys);//{name: 'Ivan'}
-
-
-let mapA = new WeakMap();
-mapA.set(user,'data');
-user=null;
-console.log(mapA.has(user));//false
-console.log(mapA);//WeakMap { <items unknown> }
-
-
+//добавить элемент в wrapper в начало родителя
+//wrapper.prepend(div);

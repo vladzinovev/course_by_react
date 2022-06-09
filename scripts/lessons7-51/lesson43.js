@@ -1,57 +1,52 @@
 // lesson 43 (actions with elements on the page)
-"use strict"
+"use strict";
 
 
 const box = document.getElementById('box'); 
-const btns = document.getElementsByTagName('button');
-const circles = document.getElementsByClassName('circle');
-const hearts = document.querySelectorAll('.heart');
-const oneHeart = document.querySelector('.heart');
-//или
-const hearts = wrapper.querySelectorAll('.heart');
-const oneHeart = wrapper.querySelector('.heart');
-
-
 box.style.backgroundColor='blue';
 box.style.width='500px';
 //или
 box.style.cssText='background-color:blue; width:500px';
 
-
+const btns = document.getElementsByTagName('button');
+const circles = document.getElementsByClassName('circle');
 btns[1].style.borderRadius='100%';
 circles[0].style.backgroundColor='red';
 
+
+
+const hearts = document.querySelectorAll('.heart');
+//или
+const hearts = wrapper.querySelectorAll('.heart');
+//item-каждый элемент, второй аргумент -номер по порядку, третий - ссылка на массив
+hearts.forEach(item=>{
+    item.style.backgroundColor='yellow';
+});
 /* 
 for (let i=0; i<hearts.length;i++){
     hearts[i].style.backgroundColor='black';
 }
 */
 
-//item-каждый элемент, второй аргумент -номер по порядку, третий - ссылка на массив
-hearts.forEach(item=>{
-    item.style.backgroundColor='yellow';
-});
-
 //создать элемент
 const div = document.createElement('div');
-
 //const text = document.createTextNode('Тут был я')
 
 //добавили класс black
 div.classList.add('black');
 
-//добавить элемент в конец родителя
+//добавить элемент в body в конце 
 document.body.append(div);
 //или старый вариант (через родителя)
 //wrapper.appendChild(div);
 
-//добавить элемент в wrapper в конец родителя
+//добавить элемент в внутри wrapper в конец
 document.querySelector('.wrapper').append(div);
 //или
 const wrapper = document.querySelector('.wrapper');
 wrapper.append(div);
 
-//добавить элемент в wrapper в начало родителя
+//добавить элемент в внутри wrapper в начало
 wrapper.prepend(div);
 
 
