@@ -1,8 +1,8 @@
 // lesson 45 (events)
-"use strict"
+"use strict";
 
 const btn = document.querySelector('button');
-//1 способ выодит только последний alert
+//1 способ выводит только последний alert
 btn.onclick = function() {
     alert('Click');
 };
@@ -65,13 +65,13 @@ link.addEventListener('click',(event)=>{
     event.preventDefault();
 });
 
-//вешаем обработсик событий сразу на все эл
+//вешаем обработчик событий сразу на все эл
 const btns = document.querySelectorAll('.button');
 btns.forEach(item=>{
-    item.addEventListener('click', deleteElem)
-})
+    item.addEventListener('click', deleteElem);
+});
 
-//чтобы обработчик сработал он раз надо в options прописать
+//чтобы обработчик сработал только один раз, то надо в options прописать
 btn.addEventListener('click',deleteEl,{once:true});
 
 
