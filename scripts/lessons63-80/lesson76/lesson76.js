@@ -47,7 +47,7 @@ function User(name,id){
     };
 }
 const ivan = new User('Ivan',28);
-
+console.log(ivan);//User { name: 'Ivan', id: 28, human: true, hello: [Function (anonymous)] }
 
 //4)ручная привязка this: call, apply, bind
 function sayName(surname){
@@ -102,7 +102,7 @@ const objO={
         say();
     }
 };
-obj.sayNumber();
+objO.sayNumber(); //5     { num: 5, sayNumber: [Function: sayNumber] }
 
 //первый вариант
 const double1 = (a)=>{
