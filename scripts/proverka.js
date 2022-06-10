@@ -1,18 +1,9 @@
-//создать элемент
-const div = document.createElement('div');
-//добавили класс black
-div.classList.add('black');
-
-//добавить элемент в конец родителя
-//document.body.append(div);
-//или старый вариант (через родителя)
-//wrapper.appendChild(div);
-
-//добавить элемент в wrapper в конец родителя
-document.querySelector('.wrapper').append(div);
-//или
-//const wrapper = document.querySelector('.wrapper');
-//wrapper.append(div);
-
-//добавить элемент в wrapper в начало родителя
-//wrapper.prepend(div);
+const btn = document.querySelector('button');
+const overlay = document.querySelector('.overlay');
+const deleteElem = (e) =>{
+    console.log(e.target); //выводит два раза одну и ту же кнопку
+    console.log(e.currentTarget); //выведит два разных эл
+    console.log(e.type); //тип события (click)
+};
+btn.addEventListener('click',deleteElem);
+overlay.addEventListener('click',deleteElem);
