@@ -1,5 +1,5 @@
 // lesson 46 (navigation)
-"use strict"
+"use strict";
 
 
 console.log(document.body);
