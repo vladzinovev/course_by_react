@@ -5,7 +5,7 @@
 const p = document.querySelectorAll('p');
 console.log(p);
 
-//defer помогает выполнить script когда html выполнена
+//defer помогает выполнить script загружая его в фоновом режиме. Когда html полностью запущена , то и script тоже запускается
 // with <script defer src="./scripts/lesson50.js"></script>
 //в console length:2
 
