@@ -1,3 +1,4 @@
+// lesson 54 (оператор опциональной цепочки)
 'use strict';
 
 const box = document.querySelector('.box');
@@ -5,7 +6,7 @@ const block = document.querySelector('.block');
 
 console.log(block);
 /* 
-console.log(block.textContent);
+console.log(block.textContent);//ощибка
 console.log(1+2); //не выведится так как предыдущий вызов ошибка
 */
 
@@ -24,7 +25,7 @@ console.log(1+2);//3
 const userData={
     name: 'Ivan',
     age: null
-}
+};
 /* 
 console.log(userData.skills.js);//буд ошибка так как такого эл нет
 */
@@ -44,5 +45,5 @@ const userDataFunc={
         console.log('Hello');
     }
 };
-userData.say();
-userData.hey?.();
+userDataFunc.say();
+userDataFunc.hey?.();
