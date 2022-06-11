@@ -1,3 +1,4 @@
+// lesson 53 (оператор нулевого слияния)
 'use strict';
 
 const box = document.querySelector('.box');
@@ -20,17 +21,18 @@ changeParams(box, newHeight, newWidth); //100 , 400
 function changeParametrs(elem, h, w) {
     elem.style.height = `${h || 200}px`;
     elem.style.width = `${w || 200 }px`;
+    console.log(elem.style.height,elem.style.width);
 }
-changeParametrs(box); //200 , 200
+changeParametrs(box,0); //200 , 200
 
 let userName;
 console.log(userName ?? 'User'); //будет User
 
 //если стоит ?? то в первую очередь 0 , Nan , null, а потом User
-
 function changeParametr(elem, h, w) {
     elem.style.height = `${h ?? 200}px`;
     elem.style.width = `${w ?? 200 }px`;
+    console.log(elem.style.height,elem.style.width);
 }
 changeParametr(box,0); //0 , 200
 
