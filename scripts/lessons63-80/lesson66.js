@@ -1,5 +1,5 @@
 // lesson 66 (сборщик мусора и утечки памяти)
-"use strict"
+"use strict";
 
 
 function func(){
@@ -26,7 +26,7 @@ function outer() {
     return function inner(){
         potentiallyHugeArray.push('Hello');
         console.log('Hello!!');
-    }
+    };
 }
 const sayHello = outer();
 

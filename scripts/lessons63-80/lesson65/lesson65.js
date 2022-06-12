@@ -5,16 +5,17 @@
 const timerId = setTimeout(function(){
     console.log('Hello');
 }, 2000);
-//или
+//2 вариант
 const timerId2 = setTimeout(function(text){
     console.log(text);
 }, 2000, 'Hello');
+//3 вариант
+//const timerId3 = setTimeout(logger, 2000);
 //или
-const timerId3 = setTimeout(logger, 2000);
+const timerId3 = setInterval(logger, 2000);
 function logger(){
     console.log('Hello');
 }
-
 //останавливаем наш таймер
 clearInterval(timerId);
 
