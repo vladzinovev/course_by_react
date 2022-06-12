@@ -1,5 +1,5 @@
 // lesson 63 (ClassList)
-"use strict"
+"use strict";
 
 const btns = document.querySelectorAll('button');
 
@@ -11,7 +11,7 @@ console.log(btns[0].classList.item(0));//blue
 console.log(btns[0].classList.add('red', 'white'));
 //удаляем определенный класс
 console.log(btns[0].classList.remove('blue'));
-//если данный класс есть, то удаляем его, а если данного класса нет, то удаляем его
+//если данный класс есть, то удаляем его, а если данного класса нет, то добавляем
 console.log(btns[0].classList.toggle('blue'));
 
 //выводит булиновое значение (true или false)
@@ -34,7 +34,7 @@ btns[0].addEventListener('click',()=>{
 //делегирование событий
 const wrapper = document.querySelector('button');
 
-//работает для всех сущес вующих кнопок и для созданных после
+//работает для всех существующих кнопок и для созданных после
 wrapper.addEventListener('click', (event)=>{
     if (event.target && event.target.tagName == "BUTTON"){
         console.log('Hello');
@@ -42,7 +42,7 @@ wrapper.addEventListener('click', (event)=>{
     if (event.target && event.target.classList.contains('blue')){
         console.log('Hello');
     }
-    //проверяет на совпадение
+    //проверяет на совпадение еще одного класса
     if (event.target && event.target.matches("button.red")){
         console.log('Hello');
     }
@@ -53,8 +53,8 @@ wrapper.addEventListener('click', (event)=>{
 btns.forEach(btn=>{
     btn.addEventListener('click', (event)=>{
         console.log('Hello');
-    })
-})
+    });
+});
 
 const btn=document.createElement('button');
 btn.classList.add('red');
