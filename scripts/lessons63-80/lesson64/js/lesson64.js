@@ -1,3 +1,6 @@
+// lesson 64 (Создание табов в новом проекте)
+"use strict";
+
 window.addEventListener('DOMContentLoaded',()=>{
 
     const tabs = document.querySelectorAll('.tabheader__item'),
@@ -29,6 +32,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     hideTabContent();
     showTabContent(0);
 
+    //запуск основной функции по клику
     tabsParent.addEventListener('click',(event)=>{
         const target = event.target;
 
