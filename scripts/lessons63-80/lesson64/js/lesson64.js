@@ -20,8 +20,8 @@ window.addEventListener('DOMContentLoaded',()=>{
         });
     }
 
-    //функция пл показу контента и активации класса активности
-    function showTabContent(i){
+    //функция по показу контента и активации класса активности
+    function showTabContent(i=0){
         //tabsContent[i].style.display='block';
         //или
         tabsContent[i].classList.add('show','fade');
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     }
 
     hideTabContent();
-    showTabContent(0);
+    showTabContent();
 
     //запуск основной функции по клику
     tabsParent.addEventListener('click',(event)=>{

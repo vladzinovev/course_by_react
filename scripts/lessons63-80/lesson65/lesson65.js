@@ -1,5 +1,5 @@
 // lesson 65 (setTimeout, setInterval)
-"use strict"
+"use strict";
 
 //вызывается через определенный промежуток времени один раз
 const timerId = setTimeout(function(){
@@ -63,5 +63,6 @@ function myAnimation(){
         }
     }
 }
+
 btn.addEventListener('clock',myAnimation);
 });
