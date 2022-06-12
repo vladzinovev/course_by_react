@@ -32,7 +32,7 @@ const sayHello = outer();
 
 
 
-//при удалении эл исчезает со страницы, testDiv остается в вертске, тем самым происходит утечка данных
+//при удалении эл исчезает со страницы, testDiv остается в верстке, тем самым происходит утечка данных
 function createElement(){
     const div = document.createElement('div');
     div.id = 'test';

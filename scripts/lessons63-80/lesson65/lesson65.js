@@ -33,6 +33,7 @@ btn.addEventListener('click', ()=>{
     timerId = setTimeout(logger, 2000);
 });
 clearInterval(timerId);
+
 function logger(){
     if(i===4){
         clearInterval(timerId);
@@ -60,7 +61,7 @@ function myAnimation(){
         } else {
             pos++;
             elem.style.top = pos + "px";
-            elem.style.left=pos +"px";
+            elem.style.left = pos +"px";
         }
     }
 }
