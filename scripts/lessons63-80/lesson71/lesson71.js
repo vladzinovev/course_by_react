@@ -1,3 +1,4 @@
+// lesson 71 (параметры документа, окна и работа с ними)
 'use strict';
 
 const box = document.querySelector('.box');

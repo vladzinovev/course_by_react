@@ -80,7 +80,7 @@ window.addEventListener('DOMContentLoaded', function() {
     function setClock(selector, endtime) {
 
         const timer = document.querySelector(selector),
-            days = timer.querySelector("#days"),
+            days = timer.querySelector('#days'),
             hours = timer.querySelector('#hours'),
             minutes = timer.querySelector('#minutes'),
             seconds = timer.querySelector('#seconds'),

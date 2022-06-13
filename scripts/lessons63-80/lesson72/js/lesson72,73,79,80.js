@@ -7,7 +7,6 @@ window.addEventListener('DOMContentLoaded', function() {
 		tabsParent = document.querySelector('.tabheader__items');
 
 	function hideTabContent() {
-        
         tabsContent.forEach(item => {
             item.classList.add('hide');
             item.classList.remove('show', 'fade');
@@ -180,7 +179,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // Используем классы для создание карточек меню
 
-    
+
     //урок 79
 /*  class MenuCard {
         constructor(src, alt, title, descr, price, parentSelector) {
