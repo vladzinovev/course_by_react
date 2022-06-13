@@ -131,6 +131,7 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }); 
     */
+   
     //lesson 73
     const modalTrigger = document.querySelectorAll('[data-modal]'),
     modal = document.querySelector('.modal'),
