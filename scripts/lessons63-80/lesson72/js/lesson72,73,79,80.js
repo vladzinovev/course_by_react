@@ -65,7 +65,7 @@ window.addEventListener('DOMContentLoaded', function() {
             return num;
         }
     }
-
+    
     function setClock(selector, endtime) {
 
         const timer = document.querySelector(selector),
@@ -131,7 +131,7 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }); 
     */
-   
+
     //lesson 73
     const modalTrigger = document.querySelectorAll('[data-modal]'),
     modal = document.querySelector('.modal'),
