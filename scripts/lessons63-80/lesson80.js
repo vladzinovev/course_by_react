@@ -7,10 +7,14 @@ const log = function(a,b,...rest){
 };
 log('basic','rest','operator','usage');//basic rest [ 'operator', 'usage' ]
 
+const log = function(a,b,...rest){
+    console.log(a,b,...rest);
+};
+log('basic','rest','operator','usage');//basic rest operator usage
 
 //параметры по умоланию
 //новый вариант
-function calcOrDuble(number,basis=2){ 
+function calcOrDouble(number,basis=2){ 
     console.log(number*basis);
 }
 
@@ -21,8 +25,8 @@ function calcOrDuble(number,basis){
 }
 */
 
-calcOrDuble(3,5);//15
-calcOrDuble(3);//6
+calcOrDouble(3,5);//15
+calcOrDouble(3);//6
 
 
 

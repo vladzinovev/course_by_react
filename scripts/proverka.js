@@ -34,3 +34,13 @@ boxesSelector.forEach(box =>{
 
 //метод closest выводит первый эл с таким селектором среди родителей
 console.log(boxesSelector[0].closest('.wrapper'));
+
+function setOptions(height, width, ...additional) {
+    console.log(height, width, ...additional);
+}
+setOptions(400, 500, 'red', 'top');
+
+const log = function(a,b,...rest){
+    console.log(a,b,...rest);
+};
+log('basic','rest','operator','usage');//basic rest operator usage
