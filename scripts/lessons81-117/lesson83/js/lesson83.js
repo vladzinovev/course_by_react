@@ -1,4 +1,4 @@
-// lesson 83 (AJAX и обобщение с сервером)
+// lesson 83 (AJAX и общение с сервером)
 "use strict";
 
 const inputRub= document.querySelector('#rub'),
