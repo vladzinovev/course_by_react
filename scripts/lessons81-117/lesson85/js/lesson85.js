@@ -226,12 +226,14 @@ window.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
+            //создаем блок для сообщения загрузки
             let statusMessage = document.createElement('img');
             statusMessage.src = message.loading;
             statusMessage.style.cssText = `
                 display: block;
                 margin: 0 auto;
             `;
+            //под следующим блоком
             form.insertAdjacentElement('afterend', statusMessage);
         
             const request = new XMLHttpRequest();
@@ -260,6 +262,7 @@ window.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    //создаем функцию для блока с текстовым сообщением 
     function showThanksModal(message) {
         const prevModalDialog = document.querySelector('.modal__dialog');
 
