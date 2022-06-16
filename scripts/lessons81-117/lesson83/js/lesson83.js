@@ -9,7 +9,7 @@ const inputRub= document.querySelector('#rub'),
 inputRub.addEventListener('input',()=>{
     //запрос 
     const request = new XMLHttpRequest();
-    //метод open собирает настройк, который в будущем поможет сделать запрос
+    //метод open собирает настройку, которая в будущем поможет сделать запрос
     //1арг: method-метод, который используется для запроса (GET, POST)
     //2арг: url, путь к нашему серверу
     //3арг: async, отвечает за асихронность
