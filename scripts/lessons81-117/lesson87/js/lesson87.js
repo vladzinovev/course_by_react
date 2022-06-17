@@ -262,7 +262,6 @@ window.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    //создаем функцию для блока с текстовым сообщением 
     function showThanksModal(message) {
         const prevModalDialog = document.querySelector('.modal__dialog');
 
@@ -285,4 +284,15 @@ window.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }, 4000);
     }
+
+
+    fetch('https://jsonplaceholder.typicode.com/posts',{
+        method:"POST",
+        body: JSON.stringify({name:'Alex'}),
+        headers:{
+            'Content-type':'application/json'
+        }
+    })
+    .then(response=>response.json())
+    .then(json=>console.log(json));
 });
