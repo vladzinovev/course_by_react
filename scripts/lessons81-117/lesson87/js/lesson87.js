@@ -241,19 +241,26 @@ window.addEventListener('DOMContentLoaded', function() {
                 object[key] = value;
             });
 
+            //создаем запрос для отправки данных
             fetch('server.php', {
                 method: 'POST',
+                //наши заголовки
                 headers: {
                     'Content-Type': 'application/json'
                 },
+                //конвертируем в json
                 body: JSON.stringify(object)
             }).then(data => {
                 console.log(data);
+                //выводим сообщение что все успешно
                 showThanksModal(message.success);
+                //очищаем блок с сообщением
                 statusMessage.remove();
             }).catch(() => {
+                //выводим ошибку
                 showThanksModal(message.failure);
             }).finally(() => {
+                //очищаем форму
                 form.reset();
             });
         });
