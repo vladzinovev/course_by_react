@@ -9,3 +9,7 @@ const shortNames = names.filter(function(name){
 console.log(shortNames);//[ 'Ivan', 'Ann' ]
 
 
+//map позволяет взять исходный массив и изменить каждый элемент внутри него
+const answer = ['IvAn', 'AnnA', 'KSEnia'];
+const result = answer.map(item=>item.toLowerCase());
+console.log(result);//[ 'ivan', 'anna', 'ksenia' ]
