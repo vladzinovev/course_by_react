@@ -29,3 +29,22 @@ console.log(num.every(item=> typeof(item)==='number'));//true
 console.log(num.some(item=> typeof(item)==='number'));//true
 
 
+
+//reduce (для вычисления какого-нибудь единого значения на основе всего массива)
+const arr = [4,5,1,3,2,6];
+const res = arr.reduce((sum,current)=>sum+current,0);//0-начальное значение, но можно и без него
+console.log(res);//21
+
+const arrS = ['apple', 'pear', 'plum'];
+const sumS= arrS.reduce((sum,current)=>`${sum}, ${current}`);
+console.log(sumS);//apple, pear, plum
+
+
+
+
+
+
+
+
+
+
