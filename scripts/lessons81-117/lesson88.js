@@ -40,8 +40,17 @@ const sumS= arrS.reduce((sum,current)=>`${sum}, ${current}`);
 console.log(sumS);//apple, pear, plum
 
 
-
-
+//Пример
+const obj = {
+    ivan:'persone',
+    ann:'persone',
+    dog:'animal',
+    cat:'animal'
+};
+const newArr = Object.entries(obj)//[[ 'ivan', 'persone' ], [ 'ann', 'persone' ], [ 'dog', 'animal' ], [ 'cat', 'animal' ]]
+.filter(item=>item[1] === 'persone')//[ [ 'ivan', 'persone' ], [ 'ann', 'persone' ] ]
+.map(item=>item[0]);//[ 'ivan', 'ann' ]
+console.log(newArr);
 
 
 
