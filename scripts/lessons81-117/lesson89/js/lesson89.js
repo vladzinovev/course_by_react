@@ -181,7 +181,7 @@ window.addEventListener('DOMContentLoaded', function() {
             this.parent.append(element);
         }
     }
-
+    //формируем наши карточки на странице
     getResource('http://localhost:3000/menu')
         .then(data => {
             data.forEach(({img, altimg, title, descr, price}) => {
@@ -224,7 +224,7 @@ window.addEventListener('DOMContentLoaded', function() {
     forms.forEach(item => {
         bindPostData(item);
     });
-
+    //отправляем данные на сервер
     const postData = async (url, data) => {
         let res = await fetch(url, {
             method: "POST",
@@ -236,7 +236,16 @@ window.addEventListener('DOMContentLoaded', function() {
     
         return await res.json();
     };
-
+    //получаем данные с сервера
+    async function getResource(url) {
+        let res = await fetch(url);
+    
+        if (!res.ok) {
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+    
+        return await res.json();
+    }
 
     function bindPostData(form) {
         form.addEventListener('submit', (e) => {
@@ -251,13 +260,13 @@ window.addEventListener('DOMContentLoaded', function() {
             form.insertAdjacentElement('afterend', statusMessage);
         
             const formData = new FormData(form);
-            const object = {};
-            formData.forEach(function(value, key){
-                object[key] = value;
-            });
-            
+            /* 
+            const obj={a:23, b:50};
+            console.log(Object.entries(obj));//[ [ 'a', 23 ], [ 'b', 50 ] ]
+            */
+            const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-            postData('server.php', JSON.stringify(object))
+            postData('http://localhost:3000/requests', json)
             .then(data => {
                 console.log(data);
                 showThanksModal(message.success);
