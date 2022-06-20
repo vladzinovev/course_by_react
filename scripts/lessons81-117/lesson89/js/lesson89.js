@@ -181,6 +181,8 @@ window.addEventListener('DOMContentLoaded', function() {
             this.parent.append(element);
         }
     }
+
+    //1 вариант
     //формируем наши карточки на странице
     getResource('http://localhost:3000/menu')
         .then(data => {
@@ -189,6 +191,7 @@ window.addEventListener('DOMContentLoaded', function() {
             });
         });
 
+    //2 вариант
     // getResource('http://localhost:3000/menu')
     //     .then(data => createCard(data));
 
