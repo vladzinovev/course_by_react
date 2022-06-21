@@ -1,3 +1,7 @@
+// lesson 91 (axios) 
+"use strict";
+
+
 window.addEventListener('DOMContentLoaded', function() {
 
     // Tabs
@@ -214,6 +218,16 @@ window.addEventListener('DOMContentLoaded', function() {
     //         document.querySelector(".menu .container").append(element);
     //     });
     // }
+    
+    //axios
+    axios.get('http://localhost:3000/menu')
+        .then(data => {
+            data.data(({img, altimg, title, descr, price}) => {
+                new MenuCard(img, altimg, title, descr, price, ".menu .container").render();
+            });
+        });
+
+
 
     // Forms
 
