@@ -285,8 +285,13 @@ window.addEventListener('DOMContentLoaded', function() {
           total = document.querySelector('#total'),
           current = document.querySelector('#current');
 
-    
+    showSlides(slideIndex);
 
+    if (slides.length < 10) {
+        total.textContent = `0${slides.length}`;
+    } else {
+        total.textContent = slides.length;
+    }
 
     function showSlides(n) {
         if (n > slides.length) {
@@ -311,4 +316,11 @@ window.addEventListener('DOMContentLoaded', function() {
         showSlides(slideIndex += n);
     }
 
+    prev.addEventListener('click', function(){
+        plusSlides(-1);
+    });
+
+    next.addEventListener('click', function(){
+        plusSlides(1);
+    });
 });
