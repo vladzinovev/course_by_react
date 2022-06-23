@@ -277,7 +277,8 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     // Slider
-
+    /* 
+    
     let slideIndex = 1;
     const slides = document.querySelectorAll('.offer__slide'),
           prev = document.querySelector('.offer__slider-prev'),
@@ -323,4 +324,18 @@ window.addEventListener('DOMContentLoaded', function() {
     next.addEventListener('click', function(){
         plusSlides(1);
     });
+    */
+    let offset = 0;
+    let slideIndex = 1;
+
+    const slides = document.querySelectorAll('.offer__slide'),
+        prev = document.querySelector('.offer__slider-prev'),
+        next = document.querySelector('.offer__slider-next'),
+        total = document.querySelector('#total'),
+        current = document.querySelector('#current'),
+        slidesWrapper = document.querySelector('.offer__slider-wrapper'),
+        width = window.getComputedStyle(slidesWrapper).width,
+        slidesField = document.querySelector('.offer__slider-inner');
+
+    
 });
