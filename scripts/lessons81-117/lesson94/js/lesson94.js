@@ -277,58 +277,12 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     // Slider
-    /* 
-    
-    let slideIndex = 1;
-    const slides = document.querySelectorAll('.offer__slide'),
-          prev = document.querySelector('.offer__slider-prev'),
-          next = document.querySelector('.offer__slider-next'),
-          total = document.querySelector('#total'),
-          current = document.querySelector('#current');
 
-    showSlides(slideIndex);
-
-    if (slides.length < 10) {
-        total.textContent = `0${slides.length}`;
-    } else {
-        total.textContent = slides.length;
-    }
-
-    function showSlides(n) {
-        if (n > slides.length) {
-            slideIndex = 1;
-        }
-        if (n < 1) {
-            slideIndex = slides.length;
-        }
-
-        slides.forEach((item) => item.style.display = 'none');
-
-        slides[slideIndex - 1].style.display = 'block'; // Как ваша самостоятельная работа - переписать на использование классов show/hide
-        
-        if (slides.length < 10) {
-            current.textContent =  `0${slideIndex}`;
-        } else {
-            current.textContent =  slideIndex;
-        }
-    }
-
-    function plusSlides (n) {
-        showSlides(slideIndex += n);
-    }
-
-    prev.addEventListener('click', function(){
-        plusSlides(-1);
-    });
-
-    next.addEventListener('click', function(){
-        plusSlides(1);
-    });
-    */
     let offset = 0;
     let slideIndex = 1;
 
     const slides = document.querySelectorAll('.offer__slide'),
+        slider = document.querySelector('.offer__slider'),
         prev = document.querySelector('.offer__slider-prev'),
         next = document.querySelector('.offer__slider-next'),
         total = document.querySelector('#total'),
@@ -347,6 +301,25 @@ window.addEventListener('DOMContentLoaded', function() {
     slides.forEach(slide => {
         slide.style.width = width;
     });
+
+    slider.style.position = 'relative';
+
+    const indicators = document.createElement('ol'),
+          dots = [];
+    indicators.classList.add('carousel-indicators');
+    indicators.style.cssText = `
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        margin-right: 15%;
+        margin-left: 15%;
+        list-style: none;
+    `; // Если хотите - добавьте в стили, но иногда у нас нет доступа к стилям
+    slider.append(indicators);
 
     next.addEventListener('click', () => {
         if (offset == (+width.slice(0, width.length - 2) * (slides.length - 1))) {
