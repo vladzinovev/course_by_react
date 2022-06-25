@@ -26,15 +26,15 @@ if(localStorage.getItem(isChecked)){
     checkbox.checked=true;
 }
 
-if(localStorage.getItem('bg')==='changed'){
-    form.style.background='red';
-
-}
 
 //прик клике на чекбокс сохраняем галочку на сервере
 checkbox.addEventListener('cahnge',()=>{
     localStorage.setItem('isChecked',true);
 });
+
+if(localStorage.getItem('bg')==='changed'){
+    form.style.background='red';
+}
 
 change.addEventListener('click',()=>{
     if(localStorage.getItem('bg')==='changed'){
@@ -47,6 +47,16 @@ change.addEventListener('click',()=>{
     }
     
 });
+
+//тпраялем данные пользователя
+const persone = {
+    name:'Alex',
+    age:25
+};
+const serializedPersone=JSON.stringify(persone);
+localStorage.setItem('alex',serializedPersone);
+
+console.log(JSON.parse(localStorage.getItem('alex')));//{name:"Alex",age:25}
 
 
 
