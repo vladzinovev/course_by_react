@@ -5,23 +5,41 @@
 new RegExp ('pattern','flags');
 //    /pattern/f.....
 
-const ans = prompt('ВВедите ваше имя');
+const ans = "ANnn";
 
 //ищем все маленькие буквы n
-const reg = /n/;
+let reg = /n/;
+
+//-1 - нет таких букв; 0 ... бесконечн - указывает индекс буквы
+console.log(ans.search(reg));//2
+console.log(ans.match(reg));//[ 'n', index: 2, input: 'ANnn', groups: undefined ]
+
+
 //i-хотим найти внезависимости от регистра
-//const reg = /n/i;
-//g-найти сразу нксолько вхождений
-//const reg = /n/g;
+reg = /n/i;
+console.log(ans.search(reg));//1
+console.log(ans.match(reg));//[ 'n', index: 2, input: 'ANnn', groups: undefined ]
+
+
+//g-найти сразу нксолько вхождений (c методом serach не работает)
+reg = /n/g;
+console.log(ans.search(reg));//2
+console.log(ans.match(reg));//[ 'n', 'n' ]
 //m-многострочный режим, не только в одну строку, но и с переносами
-//const reg = /n/m;
-// или const reg = /n/igm;
+reg = /n/m;
+console.log(ans.search(reg));//2
+console.log(ans.match(reg));//[ 'n', index: 2, input: 'ANnn', groups: undefined ]
+// или 
+reg = /n/igm;
+console.log(ans.search(reg));//1
+console.log(ans.match(reg));//[ 'N', 'n', 'n' ]
 
-//-1 - нет таких букв; 1 ... бесконечн - указывает индекс буквы
-console.log(ans.search(reg));
 
+const pass= 'Password...';
+console.log(pass.replace(/./g, "*"));//***********
+console.log(pass.replace(/\./g, "*"));//Password***
 
-
+console.log('12-22-50'.replace(/-/g, ":"));//12:22:50
 
 
 
