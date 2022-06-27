@@ -34,15 +34,29 @@ reg = /n/igm;
 console.log(ans.search(reg));//1
 console.log(ans.match(reg));//[ 'N', 'n', 'n' ]
 
+//-------------------
 
 const pass= 'Password...';
 console.log(pass.replace(/./g, "*"));//***********
 console.log(pass.replace(/\./g, "*"));//Password***
-
+//-------------------
 console.log('12-22-50'.replace(/-/g, ":"));//12:22:50
+//-------------------
+
+const answer = "ANnn";
+let regs = /n/;
+//tset- выводит true или false на совпадение
+console.log(answer.test(regs));//true
 
 
 
+// \d ищем цифры
+// \w ищем все слова (все буквы)
+// \s ищем все пробелы
+
+const num = "ABC4dfg";
+let n = /\d/;
+console.log(num.match(n));//[ '4', index: 3, input: 'ABC4dfg', groups: undefined ]
 
 
 
