@@ -58,6 +58,10 @@ const num = "ABC4dfg";
 let n = /\d/;
 console.log(num.match(n));//[ '4', index: 3, input: 'ABC4dfg', groups: undefined ]
 
+const str ='My name is R2R2';
+//находим R2R2 буква-цифра-буква-цифра
+console.log(str.match(/\w\d\w\d/i));//[ 'R2R2', index: 11, input: 'My name is R2R2', groups: undefined ]
+
 
 
 
