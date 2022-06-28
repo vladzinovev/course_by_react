@@ -63,5 +63,10 @@ const str ='My name is R2R2';
 console.log(str.match(/\w\d\w\d/i));//[ 'R2R2', index: 11, input: 'My name is R2R2', groups: undefined ]
 
 
+//обратные классы
+// \D -ищем не цифры
+console.log(str.match(/\D/ig));//['M', 'y', ' ', 'n', 'a', 'm', 'e', ' ','i', 's', ' ', 'R','R']
+// \W -ищем не буквы
+console.log(str.match(/\W/ig));//[ ' ', ' ', ' ' ]
 
 
