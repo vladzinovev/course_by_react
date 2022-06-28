@@ -1,3 +1,6 @@
+// lesson 96 (added function deleteNotDigits) 
+"use strict";
+
 window.addEventListener('DOMContentLoaded', function() {
 
     // Tabs
@@ -423,4 +426,7 @@ window.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    function deleteNotDigits(str) {
+        return +str.replace(/\D/g, '');
+    }
 });
