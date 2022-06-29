@@ -10,7 +10,7 @@ const ans = "ANnn";
 //ищем все маленькие буквы n
 let reg = /n/;
 
-//-1 - нет таких букв; 0 ... бесконечн - указывает индекс буквы
+//-1 - нет таких букв; (0 ... бесконечн) - указывает индекс буквы
 console.log(ans.search(reg));//2
 console.log(ans.match(reg));//[ 'n', index: 2, input: 'ANnn', groups: undefined ]
 
@@ -21,7 +21,7 @@ console.log(ans.search(reg));//1
 console.log(ans.match(reg));//[ 'n', index: 2, input: 'ANnn', groups: undefined ]
 
 
-//g-найти сразу нксолько вхождений (c методом serach не работает)
+//g-найти сразу нусколько вхождений (c методом serach не работает)
 reg = /n/g;
 console.log(ans.search(reg));//2
 console.log(ans.match(reg));//[ 'n', 'n' ]

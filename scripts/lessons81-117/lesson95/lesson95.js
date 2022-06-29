@@ -27,7 +27,7 @@ if(localStorage.getItem(isChecked)){
 }
 
 
-//прик клике на чекбокс сохраняем галочку на сервере
+//при клике на чекбокс сохраняем галочку на сервере
 checkbox.addEventListener('cahnge',()=>{
     localStorage.setItem('isChecked',true);
 });
@@ -48,7 +48,7 @@ change.addEventListener('click',()=>{
     
 });
 
-//тпраялем данные пользователя
+//отправляем данные пользователя
 const persone = {
     name:'Alex',
     age:25
