@@ -21,10 +21,11 @@ console.log(ans.search(reg));//1
 console.log(ans.match(reg));//[ 'n', index: 2, input: 'ANnn', groups: undefined ]
 
 
-//g-найти сразу нусколько вхождений (c методом serach не работает)
+//g-найти сразу несколько вхождений (c методом serach не работает)
 reg = /n/g;
 console.log(ans.search(reg));//2
 console.log(ans.match(reg));//[ 'n', 'n' ]
+
 //m-многострочный режим, не только в одну строку, но и с переносами
 reg = /n/m;
 console.log(ans.search(reg));//2
@@ -57,6 +58,7 @@ console.log(answer.test(regs));//true
 const num = "ABC4dfg";
 let n = /\d/;
 console.log(num.match(n));//[ '4', index: 3, input: 'ABC4dfg', groups: undefined ]
+console.log('ABC4dfg'.match(/\d/g));//[ '4', index: 3, input: 'ABC4dfg', groups: undefined ]
 
 const str ='My name is R2R2';
 //находим R2R2 буква-цифра-буква-цифра
