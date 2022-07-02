@@ -8,9 +8,14 @@ const persone ={
 
     get userAge(){
         return this.age;
+    },
+    set userAge(num){
+        this.age=num;
     }
 };
 console.log(persone.userAge);//25
+console.log(persone.userAge = 30);//30
+console.log(persone.userAge);//30
 
 
 
