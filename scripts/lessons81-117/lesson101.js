@@ -11,5 +11,16 @@ const number = 1;
 }());
 console.log(number);//1
 
+//обьектный интерфейс
+const user = (function(){
+    const privat = function(){
+        console.log('I am privat!');
+    };
 
+    return{
+        sayHello:privat
+    };
+}());
+
+user.sayHello();//I am privat!
 
