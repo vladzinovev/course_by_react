@@ -14,16 +14,3 @@ function myModule() {
 
 //синтаксис commandjs для нашей функции в общий js файл
 module.exports=myModule;
-
-
-
-
-
-
-
-
-
-
-
-
-
