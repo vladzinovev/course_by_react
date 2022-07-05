@@ -10,5 +10,8 @@ export function sayHi(){
     console.log('Hello');
 }
 
+export default function sayBye(){
+    console.log('GoodBye');
+}
 
 
