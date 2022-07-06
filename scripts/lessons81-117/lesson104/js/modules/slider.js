@@ -151,4 +151,5 @@ function slider() {
     }
 }
 
-module.exports = slider;
+
+export default slider;
