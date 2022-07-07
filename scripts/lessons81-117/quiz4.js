@@ -2,7 +2,7 @@
 JSON.parse();
 
 //2 Можно ли при помощи fetch и XMLHttpRequest сделать одно и тоже?
-//нет
+//да но часть функционала надо еализовывать самостоятельно
 
 //3 что выведит
 const promise = new Promise((resolve, reject) => {
@@ -39,7 +39,7 @@ Promise.all([p1, p2, p3, p4, p5]).then(value => {
 }, reason => {
     console.log(reason);
 });
-//[ 'one', 'two', 'three', 'four' ]
+//reject
 
 //6 Полезными свойствами метода массивов filter являются:
 //фильтрация массива по заданной функци создание нового, отфильтрованного массива как результат работы
@@ -88,7 +88,7 @@ function one() {
     Promise.all(promises).then(values => console.log(values));
 }
 one();
-//через 5 секунд [a c b]
+//через 5 секунд [a b c]
 
 //12 При помощи какой команды можно получить данные из localStorage в поле с названием 'user'? 
 localStorage.getItem('user');
