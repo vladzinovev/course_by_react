@@ -23,3 +23,6 @@ data.forEach((blockObj, i) => {
     block.setAttribute('id', blockObj.id);
     document.body.append(block);
 });
+
+const err = new Error('eerrrroorr');
+console.log(err.name, err.message, err.stack);//Error, eerrrroorr, Error: eerrrroorr
