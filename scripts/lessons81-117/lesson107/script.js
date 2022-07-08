@@ -1,3 +1,4 @@
+// lesson 107 (Обработка ошибок) 
 'use strict';
 
 const data = [
@@ -25,7 +26,7 @@ try{
         document.body.append(block);
     });
 } catch(e){
-    
+    /* 
     console.log(e.name);
     console.log(e.message);
     console.log(e.stack);
@@ -33,8 +34,11 @@ try{
     console.error(e.name);
     console.error(e.message);
     console.error(e.stack); 
-    
+    */
 
+    if(e.name === "SyntaxError"){
+        console.log(e.message);
+    } else throw e;
 }
 
 data.forEach((blockObj, i) => {
