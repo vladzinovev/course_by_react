@@ -1,3 +1,6 @@
+require('es6-promise').polyfill();
+import 'nodelist-foreach-polyfill';
+
 import tabs from './modules/tabs';
 import modal from './modules/modal';
 import timer from './modules/timer';
@@ -27,3 +30,25 @@ window.addEventListener('DOMContentLoaded', function() {
         field: '.offer__slider-inner'
     });
 });
+/* 
+npm install --save-dev @babel/core $babel/cli @babel/preset-env
+npm install --save @babel/polyfill
+
+npm i --save-dev babel-loader
+
+
+npm i --save-dev core-js
+
+запускаем сборку
+npx webpack 
+
+
+
+если что то не работает в старом браузере
+npm install es6-promise
+
+
+
+в js файле в верху прописываем
+require('es6-promise').polyfill(); 
+*/
