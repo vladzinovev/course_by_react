@@ -1,0 +1,21 @@
+Библиотеки и фреймворки
+
+Angular:
+-node.js
+-typeSript
+-webpack
+-MVC pattern
+-Angular
+
+React:
+-JSX препроцессор
+-Babel транслитер
+-Webpack
+-node.js
+-React
+
+Vue.js:
+-Webpack
+-Vue
+-node.js
+
