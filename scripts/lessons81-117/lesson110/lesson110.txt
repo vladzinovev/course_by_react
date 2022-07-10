@@ -1,0 +1,16 @@
+Библиотека Jquery
+
+npm i jquery --save
+
+в script.js пишем
+import 'jquery';
+import $ from 'jquery'; подключаем $ из библиотеки
+
+
+npx webpack
+
+синтаксис jquery
+const btn = $('#btn');
+console.log(btn);
+
+
