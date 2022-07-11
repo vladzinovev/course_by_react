@@ -1,4 +1,4 @@
-// lesson 101 (ошибки) 
+// lesson 106 (ошибки) 
 'use strict';
 
 try{
@@ -25,7 +25,7 @@ try{
     console.log(e.message);
     console.log(e.stack);
 }finally{
-    
+
 }
 //ReferenceError
 //a is not defined
