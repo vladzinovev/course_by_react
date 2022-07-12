@@ -5,7 +5,7 @@ const number = 1;
 
 //анонимная самовызывающаяся функция
 (function(){
-    let numbet =2;
+    let number =2;
     //видит number только внутри функции
     console.log(number);//2
     console.log(number + 3);//5

@@ -9,7 +9,7 @@ console.log(btn);
 
 
 $(document).ready(function(){
-    /* при навдедние на кнопку а у нее класс сатновится активным */
+    /* при навдедние на кнопку у нее класс сатновится активным */
     $('.list-item:first').hover(function(){
         $(this).toggleClass('active');
     });

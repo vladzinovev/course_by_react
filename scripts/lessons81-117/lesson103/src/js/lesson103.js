@@ -1,4 +1,4 @@
-// lesson 101 (прием модуль) 
+// lesson 103 (export/import) 
 'use strict';
 
 export let one =1;
