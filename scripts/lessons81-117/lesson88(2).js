@@ -27,3 +27,22 @@ const getTotalIncomeAmount = (data) => {
 console.log(getTotalIncomeAmount(funds));
 
 
+
+
+
+
+
+//teacher
+/* 
+const getPositiveIncomeAmount = (data) => {
+    return data.filter(item => item.amount > 0).reduce((acc, curr) => acc + curr.amount, 0)
+}
+
+getPositiveIncomeAmount(funds);
+
+const getTotalIncomeAmount = (data) => {
+    return data.some(item => item.amount < 0) ? data.reduce((acc, curr) => acc + curr.amount, 0) : getPositiveIncomeAmount(data);
+}
+
+getTotalIncomeAmount(funds);
+ */
