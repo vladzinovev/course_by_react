@@ -1,4 +1,4 @@
-// lesson 88 (practice)
+// lesson 88(1) (practice)
 "use strict";
 
 
