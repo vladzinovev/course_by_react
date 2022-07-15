@@ -15,6 +15,12 @@ console.log('code');
 
 
 
-
+//()=>{}
+//microtasks: then/catch/finally/await
+//render (перерисовка)
+//()=>{}
+//microtasks: then/catch/finally/await
+//render (перерисовка)
+//()=>{}
 
 
