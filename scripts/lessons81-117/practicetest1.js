@@ -94,4 +94,66 @@ const user = {
 const {name, age} = user;
 //деструктуризация
 
-//11 
+//11 Какой командой можно удалить элемент со страницы?
+div.remove();
+
+//12 Какой формат экспорта/импорта ES6 модулей в JS записан синтаксически правильно?     
+export function sum(a,b){
+    console.log(a+b);
+}
+import {sum} from './somefile.js';
+
+//13 Какой из вариантов получения этого элемента со страницы будет правильным? <div id="hi">Hello</div>
+document.querySelector('#hi');
+
+//14 Какой результат работы функции combineUrls в данном случае?
+combineUrls('https', 'mysite.com');
+ 
+const combineUrls = (protocol, domain) => {
+    return `${protocol}://${domain}`;
+};
+//referenceError
+
+//15 Какое значение будет выведено в консоль при выполнении этого кода?
+let c = 4;
+function addX(x) {
+  return function(n) {
+     return n + x;
+  };
+}
+ 
+const addThree = addX(3);
+ 
+let d = addThree(c);
+let res = addThree(c);
+ 
+console.log(res);//7
+
+//16 Как отменить стандартное поведение браузера при работе со ссылками, формами и тп?
+event.preventDefault();
+
+//17 a = [1, 2, 3]; b = [1, 2, 3]; Правда ли что a == b ?
+//Нет, это два разных массива с одинаковым содержимым
+
+//18 Что выведет этот код:
+
+let y = 1; 
+let x = y = 2; 
+console.log(x);//2
+
+//19 Сколько аргументов может быть у функции?
+//сколько угодно
+
+//20 Какой код подходит на место пропущенной части функции?
+const msg = 'My number +12345678, name: Oleg';
+ 
+function transformMsg(str) {
+ 
+    let a =str.replace(/\+\d{8}/,"*****");
+    let b =a.replace(/\w{4}:\s\w{1,}/,"hidden");
+    return b;
+}
+ 
+console.log(transformMsg(msg));
+//Результатом вызова этой функции сейчас будет:
+//My number *****, hidden
