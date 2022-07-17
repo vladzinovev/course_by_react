@@ -11,7 +11,8 @@ console.log(0 && 1); // 0
 console.log(0 || NaN || false || null); // null
 
 //2 Какой из методов безопаснее всего использовать, если мы четко хотим получить от пользователя текст и использовать его дальше?
-insertAdjacentHTML
+//не правильно (insertAdjacentHTML)
+//правильно (textcontent)
 
 //3 Какой из команд можно создать элемент на странице?
 document.createElement('div');
@@ -80,7 +81,8 @@ function getSum(a, b) {
     console.log(sum());
 }
 getSum(4, 5);
-//undefined
+//не верно (undefined)
+//правильно (ничего, будет ошибка)
 
 //9 Какого метода не существует у свойства classList?
 includes();
@@ -157,3 +159,118 @@ function transformMsg(str) {
 console.log(transformMsg(msg));
 //Результатом вызова этой функции сейчас будет:
 //My number *****, hidden
+
+
+//21 Код ниже работает без ошибки. Но опытный разработчик считает его плохим. В чем причина?
+
+const price = 500;
+const money = 400;
+ 
+switch (true) {
+    case price > money:
+        console.log('Мне не хватает денег');
+        break;
+    case price < money:
+        console.log('Мне хватает денег!');
+        break;
+}
+//не верно (после каждого случая нет ключевого слова break)
+//верно (все перечисленное)
+
+//22 Что будет содержаться в переменной result после завершения кода?
+
+function foo(a,b) {
+    const [first, second] = a;
+    const {eng, ru} = b;
+ 
+    return `${second}, ${ru}`;
+}
+ 
+const result = foo(['Hello', 'Привет'], {ru: 'Мир', eng: 'World'});
+console.log(result);
+//Привет, Мир
+
+//23 Что выведет в консоль данный код?
+
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('foo');
+    }, 1000);
+    setTimeout(() => {
+        reject('bar');
+    }, 900);
+});
+  
+promise.then((value) => {
+    console.log(value);
+}).catch((e) => console.log(e));
+//bar
+
+//24 Что будет результатом выполнения этого кода на странице?
+
+const msg = 'Заявка №231';
+ 
+const div = document.createElement('div');
+div.style.background = 'red';
+div.setAttribute('data-msg', true);
+div.textContent(msg);
+ 
+document.body.append(div);
+//не верно (блок красного цвета с текстом 'Заявка №231' и атрибутом data-msg=true)
+//верно (будет ошибка) textContent - это свойство блока, его текстовый контент. Это не функция. Поэтому вот так: div.textContent = msg;
+
+//25 Что будет выведено в консоль в результате работы функции?
+
+function setOptions(height, width, ...additional) {
+    console.log(height, width, ...additional);
+}
+setOptions(400, 500, 'red', 'top');  
+//400 500 red top
+
+//26  Какая основная проблема этого кода?
+
+async function makeRequest() {
+    return await fetch('https://jsonplaceholder.typicode.com/todos/1')
+        .then(json => console.log(json));
+}
+ 
+makeRequest();
+//нет преобразвания ответа 
+/* async function makeRequest() {
+    return await fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(json => console.log(json))
+}
+makeRequest() 
+*/
+
+//27  Event loop - это...
+//механизм контроля очереди вызова фугнкций
+
+//28 Какие из методов массивов возвращают новый массив в результате своей работы?
+//Это важно знать перед частью с react'ом, да и в работе тоже. Попробуйте вспомнить, мы все их обсуждали и использовали. 
+//filter, map, slice
+
+//29 Что такое объект события?
+//это обьект, который содержит всю информацию о произошедшем событии
+
+//30 Что будет содержаться в переменной result в результате работы кода?
+
+const arr = [
+    {
+        name: 'Alex',
+        salary: 500
+    },
+    {
+        name: 'Ann',
+        salary: 1500
+    },
+    {
+        name: 'John',
+        salary: 2500
+    },
+];
+ 
+const result = arr.map(item => Object.entries(item)[1][1]).reduce((sum, curr) => sum + curr);
+console.log(result);
+//4500
