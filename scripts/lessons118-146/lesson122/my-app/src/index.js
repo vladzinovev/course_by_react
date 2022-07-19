@@ -15,6 +15,18 @@ const element = {
   }
 };
 
+const text="Hello world";
+const elem3 =(
+  <div>
+    <h2 className='text'>Hello world!</h2>
+    <h3>{text}</h3>
+    <input type="text" />
+    <label htmlFor=''></label>
+    <button>Click</button>
+    <button/>
+  </div>
+);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   elem,
