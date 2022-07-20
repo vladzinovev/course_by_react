@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
 //создали react компонент
@@ -7,11 +7,33 @@ const Header =()=>{
 }
 
 const Field=()=>{
-  return <input placeholder="Type here" typ="text"/>
+  const styleField={
+    width:'300px'
+  }
+  return <input 
+          placeholder="Type here" 
+          type="text" 
+          style={styleField}/>
 }
+class Field extends React.Component{
+  render(){
+    const styleField={
+      width:'300px'
+    }
+    return <input 
+            placeholder="Type here" 
+            type="text" 
+            style={styleField}/>
+  }
+}
+
+
+
+
 function Btn(){
   const text ='Log in';
-  return <button>{text}</button>
+  const logged = true;
+  return <button>{logged ? 'Enter' : text}</button>
 
   //const p =<p>Log in</p>
   //return <button>{p}</button>
@@ -33,5 +55,5 @@ function App() {
     </div>
   );
 }
-
+export {Header};
 export default App;

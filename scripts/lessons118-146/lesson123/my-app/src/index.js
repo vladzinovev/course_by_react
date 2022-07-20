@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-
-//const elem = <h2>Hello world!</h2>;
+import { Header } from './App';
+/* 
+const elem = <h2>Hello world!</h2>;
 const elem = React.createElement('h2',null,'Hello world!');
 const elem2 = React.createElement('h2',{className:'greetings'},'Hello world2!');
 
@@ -26,12 +27,10 @@ const elem3 =(
     <button/>
   </div>
 );
-
+ */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  elem,
-  elem2,
-  element
+  <App/>
 );
 
 
