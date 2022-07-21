@@ -6,6 +6,7 @@ import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   //инструмент для обновления потенциальных проблем в нашем приложении (доп проверки)
+  //устрашевшие конструкции отслеживает
   <StrictMode>
     <App/>
   </StrictMode>
