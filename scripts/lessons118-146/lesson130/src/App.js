@@ -22,10 +22,14 @@ function WhoAmI({name,surname,link}){
 */
 
 class WhoAmI extends Component{
+  constructor(props){
+    super(props);
+  }
   render(){
+    const {name,surname,link}=this.props;
     return (
       <div>
-        <h1>My name is {name.firstName}, surname - {surname()}</h1>
+        <h1>My name is {name}, surname - {surname}</h1>
         <a href={link}>My profile</a>
       </div>
     )
@@ -35,8 +39,8 @@ class WhoAmI extends Component{
 function App() {
   return (
     <div className="App">
-      <WhoAmI name={{firstName:'John'}} surname={()=>{return 'Smith'}} link="facebook.com"/>
-      <WhoAmI name={{firstName:'Alex'}} surname={()=>{return 'Smith'}} link="vk.com"/>
+      <WhoAmI name='John' surname='Smith' link="facebook.com"/>
+      <WhoAmI name='Alex' surname='Smith'link="vk.com"/>
     </div>
   );
 }
