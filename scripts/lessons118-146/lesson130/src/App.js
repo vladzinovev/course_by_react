@@ -46,7 +46,7 @@ class WhoAmI extends Component{
     const {name,surname,link}=this.props;
     return (
       <div>
-        <button onClick={this.nextYaer}>{this.state.text}</button>
+        <button onClick={this.nextYear}>{this.state.text}</button>
         <h1>My name is {name}, surname - {surname}, age ={this.state.years}</h1>
         <a href={link}>My profile</a>
       </div>
