@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './employees-list-item.css';
-
+//lesson133
 class EmployeesListItem extends Component{
     constructor(props){
         super(props);
@@ -31,7 +31,7 @@ class EmployeesListItem extends Component{
         }
         return (
             <li className={classNames}>
-                <span className="list-group-item-label" onClick={onRise}>{name}</span>
+                <span className="list-group-item-label" onClick={this.onRise}>{name}</span>
                 <input type="text" className="list-group-item-input" defaultValue={salary + '$'}/>
                 <div className='d-flex justify-content-center align-items-center'>
                     <button type="button"
