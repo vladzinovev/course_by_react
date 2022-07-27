@@ -5,12 +5,18 @@ class EmployeesListItem extends Component{
     constructor(props){
         super(props);
         this.state={
-            increase:false
+            increase:false,
+            rise:false
         }
     }
     onIncrease=()=>{
         this.setState(({increase})=>({
             increase:!increase
+        }))
+    }
+    onRise=()=>{
+        this.setState(({rise})=>({
+            rise:!rise
         }))
     }
     render(){
@@ -20,10 +26,12 @@ class EmployeesListItem extends Component{
         if (increase) {
             classNames += ' increase';
         }
-
+        if(rise){
+            classNames += ' like';
+        }
         return (
             <li className={classNames}>
-                <span className="list-group-item-label">{name}</span>
+                <span className="list-group-item-label" onClick={onRise}>{name}</span>
                 <input type="text" className="list-group-item-input" defaultValue={salary + '$'}/>
                 <div className='d-flex justify-content-center align-items-center'>
                     <button type="button"
