@@ -53,7 +53,7 @@ class WhoAmI extends Component{
       position:e.target.value
     })
   }
-  render(){
+  /* render(){
     const {name,surname,link}=this.props;
     const {position, years}=this.state;
     return (
@@ -72,8 +72,30 @@ class WhoAmI extends Component{
         </form>
       </Fragment>
     )
+  } */
+  render(){
+    const {name,surname,link}=this.props;
+    const {position, years}=this.state;
+    return (
+      //с помощью Fragmen мы избавились от ненужного div
+      <>
+        <button onClick={this.nextYear}>{text}</button>
+        <h1>My name is {name}, 
+            surname - {surname}, 
+            age ={years}, 
+            position-{position}
+        </h1>
+        <a href={link}>My profile</a>
+        <form>
+          <span>Введите должность</span>
+          <input type="text" onChange={(e)=>this.commitInputChanges(e, 'red')}></input>
+        </form>
+      </>
+    )
   }
 }
+
+React.Fragment key="123";
 
 function App() {
   return (
