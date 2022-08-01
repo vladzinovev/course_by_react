@@ -19,16 +19,35 @@ class EmployeesAddForm extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.onAdd(this.state.name, this.state.salary);
-        this.setState({
-            name: '',
-            salary: ''
-        })
+        const inputName = document.querySelector('.app-add-form').getElementsByTagName('input')[0];
+        const inputSalary = document.querySelector('.app-add-form').getElementsByTagName('input')[1];
+        if(this.state.name.length>1 && this.state.salary.length>1){
+            this.props.onAdd(this.state.name, this.state.salary);
+            this.setState({
+                name: '',
+                salary: ''
+            })
+            inputName.style.color='black';
+            inputSalary.style.color='black';
+        } else{
+            if(this.state.name.length<=1){
+                inputName.style.color='red';
+            }
+            else{
+                inputName.style.color='black';
+            }
+            if(this.state.salary.length<=1){
+                inputSalary.style.color='red';
+            } 
+            else{
+                inputSalary.style.color='black';
+            }
+        }
+        
     }
 
     render() {
         const {name, salary} = this.state;
-
         return (
             <div className="app-add-form">
                 <h3>Добавьте нового сотрудника</h3>
