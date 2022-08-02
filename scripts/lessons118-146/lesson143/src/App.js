@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import './App.css';
+import styled from 'styled-components'
 /* 
 function WhoAmI(props){
   return (
@@ -20,6 +21,18 @@ function WhoAmI({name,surname,link}){
   )
 }
 */
+
+const EmpItem=styled.div`
+  padding:20px;
+  margin-bottom:15px;
+  border-radius:5px;
+  box-shadow:5px 5px 10px rgba(0,0,0, .2);
+`;
+
+const Header=styled.h2`
+  font-size:22px;
+`;
+
 
 class WhoAmI extends Component{
   constructor(props){
@@ -57,29 +70,34 @@ class WhoAmI extends Component{
     const {name,surname,link}=this.props;
     const {position, years}=this.state;
     return (
-      <div>
+      <EmpItem>
         <button onClick={this.nextYear}>{text}</button>
-        <h1>My name is {name}, 
+        <Header>My name is {name}, 
             surname - {surname}, 
             age ={years}, 
             position-{position}
-        </h1>
+        </Header>
         <a href={link}>My profile</a>
         <form>
           <span>Введите должность</span>
           <input type="text" onChange={(e)=>this.commitInputChanges(e, 'red')}></input>
         </form>
-      </div>
+      </EmpItem>
     )
   }
 }
 
+const Wrapper = styled.div`
+  width:600px;
+  margin:80px auto 0 auto;
+`;
+
 function App() {
   return (
-    <div className="App">
+    <Wrapper>
       <WhoAmI name='John' surname='Smith' link="facebook.com"/>
       <WhoAmI name='Alex' surname='Smith'link="vk.com"/>
-    </div>
+    </Wrapper>
   );
 }
 
