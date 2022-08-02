@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './App.css';
-import styled from 'styled-components'
+import styled from 'styled-components';
 /* 
 function WhoAmI(props){
   return (
@@ -32,7 +32,13 @@ const EmpItem=styled.div`
 const Header=styled.h2`
   font-size:22px;
 `;
-
+export const Button = styled.button`
+    display:block;
+    padding:5px 15px;
+    background-color:gold;
+    border: 1px solid rgba(0,0,0, .2);
+    box-shadow:5px 5px 10px rgba(0,0,0, .2);
+  `;
 
 class WhoAmI extends Component{
   constructor(props){
@@ -66,12 +72,16 @@ class WhoAmI extends Component{
       position:e.target.value
     })
   }
+
+  
+
+
   render(){
     const {name,surname,link}=this.props;
     const {position, years}=this.state;
     return (
       <EmpItem>
-        <button onClick={this.nextYear}>{text}</button>
+        <Button onClick={this.nextYear}>{text}</Button>
         <Header>My name is {name}, 
             surname - {surname}, 
             age ={years}, 
