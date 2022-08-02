@@ -27,6 +27,15 @@ const EmpItem=styled.div`
   margin-bottom:15px;
   border-radius:5px;
   box-shadow:5px 5px 10px rgba(0,0,0, .2);
+  a{
+    display:block;
+    margin:10px 0 10px 0;
+    color:${props=>props.active? 'orange':'black'};
+  }
+  input{
+    display:block;
+    margin-top:10px;
+  }
 `;
 
 const Header=styled.h2`
@@ -80,7 +89,7 @@ class WhoAmI extends Component{
     const {name,surname,link}=this.props;
     const {position, years}=this.state;
     return (
-      <EmpItem>
+      <EmpItem active>
         <Button onClick={this.nextYear}>{text}</Button>
         <Header>My name is {name}, 
             surname - {surname}, 
