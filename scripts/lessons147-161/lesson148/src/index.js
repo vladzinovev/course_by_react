@@ -6,8 +6,8 @@ import './style/style.scss';
 
 //создали экземпляр класса
 const marvelService = new MarvelService();
-
-marvelService.getAllCharacters().then(res => console.log(res));
+//выводим имена всех персонажей
+marvelService.getAllCharacters().then(res => res.data.results.forEach(item => console.log(item.name)));
 
 ReactDOM.render(
   <React.StrictMode>
