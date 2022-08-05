@@ -17,8 +17,19 @@ class MarvelService {
         return this.getResource(`${this._apiBase}characters?limit=9&offset=210&${this._apiKey}`);
     }
     //получение одного персонажа
-    getCharacter = (id) => {
-        return this.getResource(`${this._apiBase}characters/${id}?${this._apiKey}`);
+    getCharacter = async (id) => {
+        const res = await this.getResource(`${this._apiBase}characters/${id}?${this._apiKey}`);
+        return this._transformCharacter(res);
+    }
+
+    _transformCharacter = (res) => {
+        return {
+            name: res.name,
+            description: res.description ? `${char.description.slice(0, 210)}...` : 'There is no description for this character',
+            thumbnail: res.thumbnail.path + '.' + char.thumbnail.extension,
+            homepage: res.urls[0].url,
+            wiki: res.urls[1].url
+        }
     }
 }
 
