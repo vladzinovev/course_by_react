@@ -1,4 +1,3 @@
-
 import { Component } from 'react';
 import MarvelService from '../../services/MarvelService';
 
@@ -6,7 +5,6 @@ import './randomChar.scss';
 import mjolnir from '../../resources/img/mjolnir.png';
 
 class RandomChar extends Component {
-
     constructor(props) {
         super(props);
         this.updateChar();
@@ -15,7 +13,7 @@ class RandomChar extends Component {
     state = {
         char: {}
     }
-    //создаем экземлпяр класса
+
     marvelService = new MarvelService();
 
     onCharLoaded = (char) => {
@@ -28,8 +26,8 @@ class RandomChar extends Component {
             .getCharacter(id)
             .then(this.onCharLoaded)
     }
-    
-    render(){
+
+    render() {
         const {char: {name, description, thumbnail, homepage, wiki}} = this.state;
         return (
             <div className="randomchar">
