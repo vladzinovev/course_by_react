@@ -9,8 +9,7 @@ import mjolnir from '../../resources/img/mjolnir.png';
 class RandomChar extends Component {
     constructor(props) {
         super(props);
-        //обновление персонажа каждые три секунды
-        setInterval(this.updateChar,3000);
+        
         console.log('constructor');
     }
 
@@ -38,10 +37,14 @@ class RandomChar extends Component {
     }
     
     componentDidMount(){
+        this.updateChar();
+        //обновление персонажа каждые три секунды
+        this.timerId = setInterval(this.updateChar, 3000);
         console.log('mount');
     }
 
     componentWillUnmount(){
+        clearInterval(this.timerId);
         console.log('unmount');
     }
 
