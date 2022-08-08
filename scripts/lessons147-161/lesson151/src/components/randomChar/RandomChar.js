@@ -9,7 +9,9 @@ import mjolnir from '../../resources/img/mjolnir.png';
 class RandomChar extends Component {
     constructor(props) {
         super(props);
-        this.updateChar();
+        //обновление персонажа каждые три секунды
+        setInterval(this.updateChar,3000);
+        console.log('constructor');
     }
 
     state = {
@@ -21,6 +23,7 @@ class RandomChar extends Component {
     marvelService = new MarvelService();
 
     onCharLoaded = (char) => {
+        console.log('update');
         this.setState({
             char, 
             loading: false
@@ -33,6 +36,14 @@ class RandomChar extends Component {
             error: true
         })
     }
+    
+    componentDidMount(){
+        console.log('mount');
+    }
+
+    componentWillUnmount(){
+        console.log('unmount');
+    }
 
     updateChar = () => {
         const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
@@ -43,6 +54,7 @@ class RandomChar extends Component {
     }
 
     render() {
+        console.log('render');
         const {char, loading, error} = this.state;
         const errorMessage = error ? <ErrorMessage/> : null;
         const spinner = loading ? <Spinner/> : null;
@@ -94,5 +106,9 @@ const View = ({char}) => {
         </div>
     )
 }
+
+//constructor render mount 
+//(click) unmount
+//(click) constructor render mount 
 
 export default RandomChar;
