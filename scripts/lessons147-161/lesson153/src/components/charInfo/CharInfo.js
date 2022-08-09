@@ -18,10 +18,10 @@ class CharInfo extends Component {
     marvelService = new MarvelService();
 
     //данный компонент устарел и он не нужее
-    componentDidCatch(err,info){
+    /* componentDidCatch(err,info){
         console.log(err,info);
         this.setState({error:true});
-    } 
+    } */
 
 
     componentDidMount() {
@@ -48,7 +48,7 @@ class CharInfo extends Component {
             .catch(this.onError);
        
         //создаем ошибку
-        this.foo.bar=0;
+        //this.foo.bar=0;
     }
 
     onCharLoaded = (char) => {
