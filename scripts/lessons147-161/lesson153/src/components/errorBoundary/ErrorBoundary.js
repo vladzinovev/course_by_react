@@ -6,6 +6,11 @@ class ErrorBoundary extends Component {
         error: false
     }
 
+    //просто вовзращает состояние ошибки
+    /* static getDerivatedStateFormError(error){
+        return {error:true};
+    } */
+
     componentDidCatch(error, errorInfo) {
         console.log(error, errorInfo);
         this.setState({
@@ -15,7 +20,7 @@ class ErrorBoundary extends Component {
 
     render() {
         if (this.state.error) {
-            return <h2>Something went wrong</h2>
+            return <ErrorMessage/>
         }
 
         return this.props.children;
