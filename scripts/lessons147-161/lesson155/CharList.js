@@ -3,7 +3,7 @@ import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import MarvelService from '../../services/MarvelService';
 import './charList.scss';
-
+import PropTypes from 'prop-types';
 class CharList extends Component {
 
     state = {
@@ -109,4 +109,19 @@ class CharList extends Component {
     }
 }
 
+//проверяем все пропсы, которые в него входят
+CharInfo.propTypes={
+    charId: PropTypes.number,
+    //charId: PropTypes.string в консоли будет ошибка что другой тип данных
+    
+    /* 
+    все типы данных которые можем проверить:
+    PropTypes.bool
+    PropTypes.array
+    PropTypes.func
+    PropTypes.number
+    PropTypes.object
+    PropTypes.string
+    PropTypes.symbol */
+}
 export default CharList;
