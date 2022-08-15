@@ -124,4 +124,10 @@ CharInfo.propTypes={
     PropTypes.string
     PropTypes.symbol */
 }
+
+//Д.з.
+CharList.propTypes = {
+    onCharSelected: PropTypes.func.isRequired
+}
+
 export default CharList;
