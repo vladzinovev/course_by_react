@@ -19,10 +19,35 @@ class Form extends Component {
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
+                    
                 </form>
+                <Portal>
+                    <Msg/>
+                </Portal>
             </Container>
         )
     }
+}
+
+const Portal=(props)=>{
+
+    const node = document.createElement('div');
+    document.body.appendChild(node);
+    return RecatDOM.createPortal(props.children, );
+}
+
+const Msg=()=>{
+    return(
+        <div 
+            style={{'width': '500px', 
+                    'height': '150px', 
+                    'backgroundColor': 'red', 
+                    'position': 'absolute', 
+                    'right': '-50%', 
+                    'bottom': '-50%'}}>
+            Hello
+        </div>
+    )
 }
 
 function App() {
