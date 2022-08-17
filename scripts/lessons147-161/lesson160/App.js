@@ -3,14 +3,25 @@ import {Container} from 'react-bootstrap';
 import './App.css';
 
 class Form extends Component {
-    constructor(props) {
-        super(props);
+    state={
+        advOpen:false
+    }
+
+    componentDidMount(){
+        setTimeout(this.handleClick, 3000)
+    }
+
+    handleClick=()=>{
+        console.log('Click');
+        this.setState(({advOpen})=>({
+            advOpen:!advOpen
+        }))
     }
 
     render() {
         return (
             <Container>
-                <form className="w-50 border mt-5 p-3 m-auto">
+                <form  onClick={this.handleClick} className="w-50 border mt-5 p-3 m-auto">
                     <div className="mb-3">
                         <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
                         <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
@@ -19,7 +30,12 @@ class Form extends Component {
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                    
+                    {
+                        this.state.advOpen ? 
+                        <Portal>
+                            <Msg/>
+                        </Portal> : null
+                    }
                 </form>
                 <Portal>
                     <Msg/>
