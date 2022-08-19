@@ -52,17 +52,26 @@ import './App.css';
     //старый вариант
     const slideStateArray=useState();
     console.log(slideStateArray);
+
     //новый вариант 1)state 2)функция
     const [slide,setSlide]=useState(0);
-
     function changeSlide(i){
-        setSlide(slide+1);
+        setSlide(slide=>slide+1);
     }
 
     const [autoplay,setAutoplay]=useState(false);
     function toggleAutoplay(){
-        setAutoplay(!autoplay);
+        setAutoplay(autoplay=> !autoplay);
     }
+
+    //второй способ
+    /* const [state,setState]=useState({slide: 0, autoplay: false});
+    function changeSlide(i){
+        setSlide(state=>({...state,slide:state.slide+i}));
+    }
+    function toggleAutoplay(){
+        setAutoplay(state=>({...state,autoplay:!state.autoplay}));
+    } */
 
      return (
          <Container>
