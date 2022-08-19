@@ -45,9 +45,18 @@ import './App.css';
         )
     }
 } */
+const calcValue=()=>{
+    console.log('random');
+    return Math.random()*(50-1)+1;
+}
 
+const Slider = (props) => {
+/* 
+    const [calc,setCalc]=useState(calcValue);//random выводится один раз
+    const [calc,setCalc]=useState(()=>calcValue());//random выводится один раз
+    const [calc,setCalc]=useState(calcValue());//random выводится много раз
+ */
 
- const Slider = (props) => {
 
     //старый вариант
     const slideStateArray=useState();
