@@ -97,8 +97,15 @@ const Slider = (props) => {
     } */
 
     useEffect(()=>{
+        console.log('effect');
         document.title=`Slide:${slide}`;
-    });
+    },[slide]);
+
+    //добавили зависимость [slide] вторым аргументом, если она изменилась, то будет вызвана функция
+    useEffect(()=>{
+        console.log('effect update');
+        document.title=`Slide:${slide}`;
+    },[]);
 
     return (
         <Container>
