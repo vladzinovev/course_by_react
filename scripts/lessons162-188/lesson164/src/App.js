@@ -96,16 +96,26 @@ const Slider = (props) => {
         setAutoplay(state=>({...state,autoplay:!state.autoplay}));
     } */
 
+    function logging(){
+        console.log('log!');
+    }
+
     useEffect(()=>{
         console.log('effect');
         document.title=`Slide:${slide}`;
-    },[slide]);
+    },[]);
 
     //добавили зависимость [slide] вторым аргументом, если она изменилась, то будет вызвана функция
     useEffect(()=>{
         console.log('effect update');
         document.title=`Slide:${slide}`;
-    },[]);
+
+        window.addEventListener('click',logging);
+
+        return()=>{
+            window.returnEventListener('click',logging);
+        }
+    },[slide]);
 
     return (
         <Container>
@@ -130,8 +140,13 @@ const Slider = (props) => {
 
 
 function App() {
+    const [slider,setSlider]=useState(true);
     return (
-        <Slider/>
+        <>
+        <button onClick={()=>setSlider(false)}>Click</button>
+            {slider ? <Slider/> : null}
+        </>
+        
     );
 }
 
