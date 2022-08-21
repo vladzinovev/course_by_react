@@ -64,12 +64,16 @@ const calcValue=()=>{
     return Math.random()*(50-1)+1;
 }
 
+const getSomeImages=()=>{
+    console.log('fetching')
+    return[
+        "https://ru.reactjs.org/logo-og.png",
+        "https://media.tproger.ru/uploads/2016/10/reactmini.png"
+    ]
+}
+
 const Slider = (props) => {
-/* 
-    const [calc,setCalc]=useState(calcValue);//random выводится один раз
-    const [calc,setCalc]=useState(()=>calcValue());//random выводится один раз
-    const [calc,setCalc]=useState(calcValue());//random выводится много раз
- */
+
 
 
     //старый вариант
@@ -87,40 +91,18 @@ const Slider = (props) => {
         setAutoplay(autoplay=> !autoplay);
     }
 
-    //второй способ
-    /* const [state,setState]=useState({slide: 0, autoplay: false});
-    function changeSlide(i){
-        setSlide(state=>({...state,slide:state.slide+i}));
-    }
-    function toggleAutoplay(){
-        setAutoplay(state=>({...state,autoplay:!state.autoplay}));
-    } */
-
-    function logging(){
-        console.log('log!');
-    }
-
-    useEffect(()=>{
-        console.log('effect');
-        document.title=`Slide:${slide}`;
-    },[]);
-
-    //добавили зависимость [slide] вторым аргументом, если она изменилась, то будет вызвана функция
-    useEffect(()=>{
-        console.log('effect update');
-        document.title=`Slide:${slide}`;
-
-        window.addEventListener('click',logging);
-
-        return()=>{
-            window.returnEventListener('click',logging);
-        }
-    },[slide]);
-
     return (
         <Container>
             <div className="slider w-50 m-auto">
-                <img className="d-block w-100" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="slide" />
+
+                {
+                    getSomeImages().map((url,i)=>{
+                        return(
+                            <img key={i} className="d-block w-100" src={url} alt="slide"/>
+                        )
+                    })
+                }
+
                 <div className="text-center mt-5">Active slide {slide} <br/> {autoplay ? 'auto' : null}</div>
                 <div className="buttons mt-3">
                     <button 
