@@ -5,8 +5,9 @@ function App() {
     const [text, setText] = useState('');
     const [posts, setPosts] = useState(data);
     //чтобы сначал вводили а потом был поиск (очередность рендера определяется) (действует сам)
-    const defferedValue = useDeferredValue(text);
-
+    //const defferedValue = useDeferredValue(text);
+    //тоже самое что и useDeferredValue, только мы сами определяем очередность
+    const [isPending, startTransition] =useTransition;
 
 
     const filteredPosts = useMemo(() => {
@@ -14,7 +15,10 @@ function App() {
     }, [defferedValue]);
 
     const onValueChange = (e) => {
-        setText(e.target.value);
+        startTransition(()=>{
+            setText(e.target.value);
+        })
+        
     }
 
     return (
@@ -23,8 +27,16 @@ function App() {
 
             <hr/>
 
-            <div>
+            {/* <div>
                 {filteredPosts.map(post => (
+                    <div key={post._id}>
+                        <h4>{post.name}</h4>
+                    </div>
+                ))}
+            </div> */}
+            <div>
+                {isPending? <h4>Loading</h4> :
+                filteredPosts.map(post => (
                     <div key={post._id}>
                         <h4>{post.name}</h4>
                     </div>
