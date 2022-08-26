@@ -5,7 +5,16 @@ function TestComponent(){
     function handleClick(){
         setCount(c=>c+1);
         setFlag(f=>!f);
-    }
+    }//рендер вызовется один раз
+
+    function handleClick(){
+        setTimeout(()=>{
+            setCount(c=>c+1);
+        setFlag(f=>!f);
+        },100);
+    }//рендер вызовется два раза
+
+    console.log('render');//рендер
     return(
         <div>
             <button onClick={handleClick}>Next</button>
