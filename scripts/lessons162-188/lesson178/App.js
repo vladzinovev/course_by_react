@@ -1,9 +1,15 @@
-import {useState,Component} from 'react';
+import {useState,Component,createContext} from 'react';
 import {Container} from 'react-bootstrap';
 import './App.css';
 
 
-//memo нужен для сравнения значения у mail и text, чтобы два раза не рендерить (кроме обьектов)
+const dataContext = createContext({
+    mail: "name@example.com",
+    text: 'some text'
+});
+
+const {Provider,Consumer} = dataContext;
+
 const Form = (props) => {
 
     return (
@@ -11,7 +17,7 @@ const Form = (props) => {
             <form className="w-50 border mt-5 p-3 m-auto">
                 <div className="mb-3">
                     <label htmlFor="exampleFormControlInput1" className="form-label mt-3">Email address</label>
-                    <InputComponent mail={props.mail}/>
+                    <InputComponent/>
                     </div>
                     <div className="mb-3">
                     <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
@@ -25,10 +31,24 @@ const Form = (props) => {
 class InputComponent extends Component{
     render(){
         return(
-            <input value={props.mail} type="email" className='form-control' placeholder="name@example.com"/>
+            <Consumer>
+                {
+                    value=>{
+                        return(
+                            <input 
+                            value={value.mail} 
+                            type="email" 
+                            className='form-control' 
+                            placeholder="name@example.com"/>
+                        )
+                    }
+                }
+            </Consumer>
         )
     }
 }
+
+
 
 function App() {
     const [data, setData] = useState({
@@ -37,7 +57,7 @@ function App() {
     },[]);
 
     return (
-        <>
+        <Provider value={data}>
             <Form mail={data.mail} text={data.text}/>
             <button 
                 onClick={() => setData({
@@ -46,7 +66,7 @@ function App() {
                 })}>
                 Click me
             </button>
-        </>
+        </Provider>
     );
 }
 
