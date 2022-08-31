@@ -3,10 +3,6 @@ import {Container} from 'react-bootstrap';
 import './App.css';
 
 
-function propsCompare(prevProps, nextProps){
-    return prevProps.mail.name===nextProps.mail.name && prevProps.text === nextProps.text
-}
-
 //memo нужен для сравнения значения у mail и text, чтобы два раза не рендерить (кроме обьектов)
 const Form = memo((props) => {
 
@@ -15,7 +11,7 @@ const Form = memo((props) => {
             <form className="w-50 border mt-5 p-3 m-auto">
                 <div className="mb-3">
                     <label htmlFor="exampleFormControlInput1" className="form-label mt-3">Email address</label>
-                    <input value={props.mail.name} type="email" className='form-control' id="exampleFormControlInput1" placeholder="name@example.com"/>
+                    <input value={props.mail} type="email" className='form-control' id="exampleFormControlInput1" placeholder="name@example.com"/>
                     </div>
                     <div className="mb-3">
                     <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
@@ -24,24 +20,24 @@ const Form = memo((props) => {
             </form>
         </Container>
     )
-})
+} )
 
 function App() {
     const [data, setData] = useState({
-        mail:{
-            name:"name@example.com"
-        },
+        mail:"name@example.com",
         text: 'some text'
-    });
+    },[]);
+
+const onLog=useCallback(()=>{
+    console.log('wow')
+})
 
     return (
         <>
-            <Form mail={data.mail} text={data.text}/>
+            <Form mail={data.mail} text={data.text} onLog={onLog}/>
             <button 
                 onClick={() => setData({
-                    mail:{
-                        name:"name@example.com"
-                    },
+                    mail:"name@example.com",
                     text: 'some text'
                 })}>
                 Click me
