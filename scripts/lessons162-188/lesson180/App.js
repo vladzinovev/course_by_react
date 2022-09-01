@@ -26,7 +26,7 @@ const withSlider=(BaseComponent, getData)=>{
                 {...props}
                 slide={slide} 
                 autoplay={autoplay} 
-                setSlide={autoplay} 
+                changeSlide={changeSlide} 
                 setAutoplay={setAutoplay}/>
     }
 }
@@ -77,12 +77,34 @@ const SliderSecond = (props) => {
         </Container>
     )
 }
+const SliderWithFirstFetch=withSlider(SliderFirst, getDataFromFirstFetch);
+const SliderWithSecondFetch=withSlider(SliderSecond, getDataFromSecondFetch);
+
+const withLogger= WrappedComponent=>props=>{
+    useEffect(()=>{
+        console.log('first render!');
+    },[]);
+    return <WrappedComponent {...props}/>
+}
+
+const Hello=()=>{
+    return(
+        <h1>Hello</h1>
+    )
+}
+
+const HelloWithLogger=withLogger(Hello);
 
 function App() {
     return (
         <>
+            {/* вместо
             <SliderFirst/>
-            <SliderSecond/>
+            <SliderSecond/> */}
+            <HelloWithLogger/>
+            <SliderWithFirstFetch/>
+            <SliderWithSecondFetch/>
+
         </>
     );
 }
