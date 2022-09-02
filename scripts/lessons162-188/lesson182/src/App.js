@@ -2,8 +2,8 @@ import {useState} from 'react';
 import {Container} from 'react-bootstrap';
 import { Transition,CSSTransition } from 'react-transition-group';
 import './App.css';
-/* 
-const Modal = (props) => {
+//Transition
+/* const Modal = (props) => {
 
     const duration = 300;
 
@@ -54,17 +54,18 @@ const Modal = (props) => {
     )
 }
  */
+
+//CSSTransition
 const Modal = (props) => {
-
-    
-
     return (
         <CSSTransition 
             in={props.show} 
             timeout={duration}
             onEnter={()=>props.setShowTrigger(false)}
             onExited={()=>props.setShowTrigger(true)}
-            classNames="modal">
+            classNames="modal"
+            mountOnEnter
+            unmountOnExit>
                 <div className="modal mt-5 d-block" >
                     <div className="modal-dialog">
                         <div className="modal-content">
