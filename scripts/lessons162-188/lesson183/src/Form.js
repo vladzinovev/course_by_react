@@ -1,7 +1,25 @@
 import {useFormik} from 'formik';
 
+const validate=values=>{
+    const errors={};
+
+    if(!values.name){
+        errors.name='Обязательное поле!';
+    } else if(values.name.length<2){
+        errors.name='Минимум 2 символа для заполнения!'
+    }
+
+    if(!values.email){
+        errors.email='Обязательное поле!';
+    } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)){
+        errors.email='Минимум 2 символа для заполнения!'
+    }
+
+    return errors;
+}
+
 const Form = () => {
-    
+
     const formik=useFormik({
         initialValues:{
             name:'',
@@ -11,6 +29,7 @@ const Form = () => {
             text:'',
             terms:false
         },
+        validate,
         onSubmit: values => console.log(JSON.stringify(values,null,2))
     })
 
@@ -25,6 +44,7 @@ const Form = () => {
                 value={formik.values.name}
                 onChange={formik.handleChange}
             />
+            {formik.errors.name ? <div>{formik.errors.name}</div> : null}
             <label htmlFor="email">Ваша почта</label>
             <input
                 id="email"
@@ -41,6 +61,7 @@ const Form = () => {
                 value={formik.values.amount}
                 onChange={formik.handleChange}
             />
+            {formik.errors.email ? <div>{formik.errors.email}</div> : null}
             <label htmlFor="currency">Валюта</label>
             <select
                 id="currency"
