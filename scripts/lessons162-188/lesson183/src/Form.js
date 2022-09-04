@@ -43,8 +43,11 @@ const Form = () => {
                 type="text"
                 value={formik.values.name}
                 onChange={formik.handleChange}
+                //когда мы ушли с данного input
+                onBlur={formik.handleBlur}
             />
-            {formik.errors.name ? <div>{formik.errors.name}</div> : null}
+            {/* если есть ошибка из errors && и пользователь провзаимодействовал с этим элементом ? тогда отобразим на страницу*/}
+            {formik.errors.name && formik.touched.name ? <div>{formik.errors.name}</div> : null}
             <label htmlFor="email">Ваша почта</label>
             <input
                 id="email"
@@ -52,6 +55,8 @@ const Form = () => {
                 type="email"
                 value={formik.values.email}
                 onChange={formik.handleChange}
+                //когда мы ушли с данного input
+                onBlur={formik.handleBlur}
             />
             <label htmlFor="amount">Количество</label>
             <input
@@ -60,14 +65,18 @@ const Form = () => {
                 type="number"
                 value={formik.values.amount}
                 onChange={formik.handleChange}
+                //когда мы ушли с данного input
+                onBlur={formik.handleBlur}
             />
-            {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+            {formik.errors.email && formik.touched.email ? <div>{formik.errors.email}</div> : null}
             <label htmlFor="currency">Валюта</label>
             <select
                 id="currency"
                 name="currency"
                 value={formik.values.currency}
-                onChange={formik.handleChange}>
+                onChange={formik.handleChange}
+                //когда мы ушли с данного input
+                onBlur={formik.handleBlur}>
                     <option value="">Выберите валюту</option>
                     <option value="USD">USD</option>
                     <option value="UAH">UAH</option>
@@ -79,6 +88,8 @@ const Form = () => {
                 name="text"
                 value={formik.values.text}
                 onChange={formik.handleChange}
+                //когда мы ушли с данного input
+                onBlur={formik.handleBlur}
             />
             <label className="checkbox">
                 <input 
@@ -86,6 +97,8 @@ const Form = () => {
                 type="checkbox"
                 value={formik.values.terms}
                 onChange={formik.handleChange} 
+                //когда мы ушли с данного input
+                onBlur={formik.handleBlur}
             />
                 Соглашаетесь с политикой конфиденциальности?
             </label>
