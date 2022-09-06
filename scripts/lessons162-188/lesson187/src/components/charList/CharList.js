@@ -99,9 +99,13 @@ const CharList = (props) => {
         )
     }
 
+    const elements = useMemo(()=>{
+        return setContent(process,()=>(charList),newItemLoading);
+    },[process]);
+
     return (
         <div className="char__list">
-            {setContent(process, ()=>renderItems(charList), newItemLoading)}
+            {elements}
             {errorMessage}
             {spinner}
             {items}
