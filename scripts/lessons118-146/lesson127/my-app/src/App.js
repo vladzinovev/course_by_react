@@ -23,7 +23,7 @@ function WhoAmI({name,surname,link}){
 function App() {
   return (
     <div className="App">
-      <WhoAmI name={{firstName:'John'}} surname={()=>{return 'Smith'}} link="facebook.com"/>
+      <WhoAmI name={{firstName:'John',secondName:'Max'}} surname={()=>{return 'Smith'}} link="facebook.com"/>
       <WhoAmI name={{firstName:'Alex'}} surname={()=>{return 'Smith'}} link="vk.com"/>
     </div>
   );

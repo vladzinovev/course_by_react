@@ -30,3 +30,23 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+import EmployeesList from '../employees-list/employees-list';
+function App() {
+  const data = [
+    {name: 'John C.', salary: 800, increase: false},
+    {name: 'Alex M.', salary: 3000, increase: true}
+  ];
+  return (
+    <div className="app">
+        <EmployeesList data={data}/>
+    </div>
+  );
+}

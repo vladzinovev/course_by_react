@@ -1,7 +1,7 @@
 // lesson 103 (export/import) 
 'use strict';
 
-export let one =1;
+export let one = 1;
 
 let two=2;
 export {two};
