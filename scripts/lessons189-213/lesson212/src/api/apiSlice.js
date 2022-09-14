@@ -9,8 +9,16 @@ export const apiSlice = createApi({
             query: () => '/heroes',
             providesTags: ['Heroes']
         }),
+        createHero: builder.mutation({
+            query: hero => ({
+                url: '/heroes',
+                method: 'POST',
+                body: hero
+            }),
+            invalidatesTags: ['Heroes']
+        }),
         
     })
 });
 
-export const {useGetHeroesQuery} = apiSlice;
+export const {useGetHeroesQuery, useCreateHeroMutation} = apiSlice;

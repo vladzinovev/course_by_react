@@ -1,9 +1,9 @@
 import {useHttp} from '../../hooks/http.hook';
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback , useMemo} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CSSTransition, TransitionGroup} from 'react-transition-group';
 
-import { heroDeleted, fetchHeroes, filteredHeroesSelector } from './heroesSlice';
+import { heroDeleted, fetchHeroes} from './heroesSlice';
 import { useGetHeroesQuery} from '../../api/apiSlice';
 
 import HeroesListItem from "../heroesListItem/HeroesListItem";
@@ -18,8 +18,18 @@ const HeroesList = () => {
         isError,
     } = useGetHeroesQuery();
 
-    const filteredHeroes = useSelector(filteredHeroesSelector);
-    const heroesLoadingStatus = useSelector(state => state.heroes.heroesLoadingStatus);
+    const activeFilter = useSelector(state => state.filters.activeFilter);
+
+    const filteredHeroes = useMemo(() => {
+        const filteredHeroes = heroes.slice();
+
+        if (activeFilter === 'all') {
+            return filteredHeroes;
+        } else {
+            return filteredHeroes.filter(item => item.element === activeFilter);
+        }
+    }, [heroes, activeFilter]);
+
     const dispatch = useDispatch();
     const {request} = useHttp();
 
@@ -65,7 +75,7 @@ const HeroesList = () => {
         })
     }
 
-    const elements = renderHeroesList(heroes);
+    const elements = renderHeroesList(filteredHeroes);
     return (
         <TransitionGroup component="ul">
             {elements}
